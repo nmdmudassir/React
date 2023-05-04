@@ -88,6 +88,7 @@ Uses inline templating and JSX, which might seem awkward to some developers.
 
 # Installation of React
 
+<!--style="font-size:30px"-->
 1. install Node.js
 
 Node.js actually provides a runtime environment to execute JavaScript code from outside a browser. NPM, the 
@@ -118,8 +119,10 @@ After the installation, check the versions using the below commands.
 
 This will show the installed versions of Node.js and NPM.
 
+<!--style="font-size:30px"-->
 2. Install visual Studio code /Sublime/Atom/Brackets.
 
+<!--style="font-size:30px"-->
 3. Create a New React Project
 
 After the successful installation of Nodejs and NPM, we can create a new React project by temporarily 
@@ -132,6 +135,7 @@ Here NPX will temporarily install create-react-app and create a new react projec
 
 that the awesome-project is the name I have chosen for my react project.
 
+<!--style="font-size:30px"-->
 4. Running the Application
 
 So the app we created can run locally on our system with the npm start command.
@@ -148,7 +152,7 @@ This will open up the react application in a new tab of our browser with the bel
 
 <br>
 
-## React ES6
+# React ES6
 
 What is ES6?
 
@@ -169,7 +173,7 @@ React uses ES6, and you should be familiar with some of the new features like:
 7. Ternary Operator
 8. Spread Operator
 
-# ES6 Classes
+## ES6 Classes
 
 ES6 introduced classes.
 
@@ -285,7 +289,7 @@ document.write(mycar.show());
 </html>
 ```
 
-## ES6 Arrow Functions
+### ES6 Arrow Functions
 
 The arrow function is a new feature of ES6, introduced in ReactJS 16. It allows the developer to create a 
 
@@ -426,7 +430,7 @@ document.getElementById("demo").innerHTML = hello("World");
 </html>
 ```
 
-# ES6 Variable
+### ES6 Variable
 
 Before ES6 there was only one way of defining your variables: with the var keyword. If you did not define them, they would be assigned to the global object. Unless you were in strict mode, then you would get an error if your variables were undefined.
 
@@ -489,7 +493,7 @@ Example:
 
 const x = 5.6;
 
-# ES6 Array Method
+### ES6 Array Method
 
 There are many JavaScript array methods.
 
@@ -516,7 +520,7 @@ ReactDOM.render(myList, document.getElementById('root'));
 
 ```
 
-# ES6 Destructuring
+### ES6 Destructuring
 
 To illustrate destructuring, we'll make a sandwich. Do you take everything out of the refrigerator to make your sandwich? No, you only take out the items you would like to use on your sandwich.
 
@@ -599,7 +603,7 @@ function myVehicle({type, color, brand, model}) {
 }
 ```
 
-# ES6 Spread Operator
+### ES6 Spread Operator
 
 ES6 introduced a new operator referred to as a spread operator, which consists of three dots (...). It allows an iterable to expand in places where more than zero arguments are expected. It gives us the privilege to obtain the parameters from an array.
 
@@ -701,7 +705,7 @@ console.log(myUpdatedVehicle);
 
 Notice the properties that did not match were combined, but the property that did match, color, was overwritten by the last object that was passed, updateMyVehicle.
 
-# ES6 Rest Parameter
+### ES6 Rest Parameter
 
 The rest parameter is introduced in ECMAScript 2015 or ES6, which improves the ability to handle parameters. 
 
@@ -807,7 +811,7 @@ console.log(num(10, 20, 30));
 ```
 
 
-# ES6 Ternary Operator
+### ES6 Ternary Operator
 
 The ternary operator is a simplified conditional operator like if / else.
 
@@ -3099,4 +3103,2466 @@ Once we insert the item and press Ok, the new item can be added in the list with
 also delete any item from the list by clicking on the particular link.
 
 ![image](images/react-animation-output3.png)
+
+# React Bootstrap
+
+Single-page applications gaining popularity over the last few years, so many front-end frameworks have 
+
+introduced such as Angular, React, Vue.js, Ember, etc. As a result, jQuery is not a necessary requirement for 
+
+building web apps. Today, React has the most used JavaScript framework for building web applications, and 
+
+Bootstrap become the most popular CSS framework. So, it is necessary to learn various ways in which Bootstrap 
+
+can be used in React apps, which is the main aim of this section.
+
+<!--style="font-size:30px"-->
+Adding Bootstrap for React
+
+We can add Bootstrap to the React app in several ways. The three most common ways are given below:
+
+1. Using the Bootstrap CDN
+2. Bootstrap as Dependency
+3. React Bootstrap Package
+
+![image](images/react-bootstrap.png)
+
+<!--style="font-size:30px"-->
+ 1. Using the Bootstrap CDN
+
+It is the easiest way of adding Bootstrap to the React app. There is no need to install or download 
+
+Bootstrap. We can simply put an `<link>` into the `<head>` section of the index.html file of the React app as 
+
+shown in the following snippet.
+
+```htm
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  
+```
+
+If there is a need to use Bootstrap components which depend on JavaScript/jQuery in the React application, we 
+
+need to include jQuery, Popper.js, and Bootstrap.js in the document. Add the following imports in the 
+
+`<script>` tags near the end of the closing </body> tag of the index.html file.
+
+```htm
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>  
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>  
+  
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+```
+
+In the above snippet, we have used jQuery's slim version, although we can also use the full version as well. 
+
+Now, Bootstrap is successfully added in the React application, and we can use all the CSS utilities and UI 
+
+components available from Bootstrap in the React application.
+
+<!--style="font-size:30px"-->
+2. Bootstrap as Dependency
+
+If we are using a build tool or a module bundler such as Webpack, then importing Bootstrap as dependency is 
+
+the preferred option for adding Bootstrap to the React application. We can install Bootstrap as a dependency 
+
+for the React app. To install the Bootstrap, run the following commands in the terminal window.
+
+---> $ npm install bootstrap --save  
+
+Once Bootstrap is installed, we can import it in the React application entry file. If the React project 
+
+created using the create-react-app tool, open the src/index.js file, and add the following code:
+
+```markdown
+import 'bootstrap/dist/css/bootstrap.min.css';  
+```
+
+* Now, we can use the CSS classes and utilities in the React application. Also, if we want to use the 
+
+JavaScript components, we need to install the jquery and popper.js packages from npm. To install the 
+
+following packages, run the following command in the terminal window.
+
+---> $ npm install jquery popper.js  
+
+Next, go to the src/index.js file and add the following imports.
+
+```markdown
+
+import $ from 'jquery';  
+import Popper from 'popper.js';  
+import 'bootstrap/dist/js/bootstrap.bundle.min';  
+```
+
+Now, we can use Bootstrap JavaScript Components in the React application.
+
+<!--style="font-size:30px"-->
+3. React Bootstrap Package
+
+The React Bootstrap package is the most popular way to add bootstrap in the React application. There are many 
+
+Bootstrap packages built by the community, which aim to rebuild Bootstrap components as React components. The 
+
+two most popular Bootstrap packages are:
+
+1. react-bootstrap: It is a complete re-implementation of the Bootstrap components as React components. It 
+
+does not need any dependencies like bootstrap.js or jQuery. If the React setup and React-Bootstrap installed, 
+
+we have everything which we need.
+
+2. reactstrap: It is a library which contains React Bootstrap 4 components that favor composition and 
+
+control. It does not depend on jQuery or Bootstrap JavaScript. However, react-popper is needed for advanced 
+
+positioning of content such as Tooltips, Popovers, and auto-flipping Dropdowns.
+
+<!--style="font-size:30px"-->
+React Bootstrap Installation
+
+Let us create a new React app using the create-react-app command as follows.
+
+---> $ npx create-react-app react-bootstrap-app  
+
+After creating the React app, the best way to install Bootstrap is via the npm package. To install Bootstrap, 
+
+navigate to the React app folder, and run the following command.
+
+---> $ npm install react-bootstrap bootstrap --save  
+
+<!--style="font-size:30px"-->
+Importing Bootstrap
+
+Now, open the src/index.js file and add the following code to import the Bootstrap file.
+
+---> import 'bootstrap/dist/css/bootstrap.min.css';  
+
+We can also import individual components like import { SplitButton, Dropdown } from 'react-bootstrap'; 
+
+instead of the entire library. It provides the specific components which we need to use, and can 
+
+significantly reduce the amount of code.
+
+In the React app, create a new file named ThemeSwitcher.js in the src directory and put the following code.
+
+```markdown
+import React, { Component } from 'react';  
+import { SplitButton, Dropdown } from 'react-bootstrap';  
+  
+class ThemeSwitcher extends Component {  
+  
+  state = { theme: null }  
+    
+  chooseTheme = (theme, evt) => {  
+    evt.preventDefault();  
+    if (theme.toLowerCase() === 'reset') { theme = null }  
+    this.setState({ theme });  
+  }  
+    
+  render() {  
+    const { theme } = this.state;  
+    const themeClass = theme ? theme.toLowerCase() : 'default';  
+      
+    const parentContainerStyles = {  
+      position: 'absolute',  
+      height: '100%',  
+      width: '100%',  
+      display: 'table'  
+    };  
+      
+    const subContainerStyles = {  
+      position: 'relative',  
+      height: '100%',  
+      width: '100%',  
+      display: 'table-cell',  
+    };  
+      
+    return (  
+      <div style={parentContainerStyles}>  
+        <div style={subContainerStyles}>  
+          
+          <span className={`h1 center-block text-center text-${theme ? themeClass : 'muted'}`} style={{ marginBottom: 25 }}>{theme || 'Default'}</span>  
+            
+          <div className="center-block text-center">  
+            <SplitButton bsSize="large" bsStyle={themeClass} title={`${theme || 'Default Block'} Theme`}>  
+              <Dropdown.Item eventKey="Primary Block" onSelect={this.chooseTheme}>Primary Theme</Dropdown.Item>  
+              <Dropdown.Item eventKey="Danger Block" onSelect={this.chooseTheme}>Danger Theme</Dropdown.Item>  
+              <Dropdown.Item eventKey="Success Block" onSelect={this.chooseTheme}>Success Theme</Dropdown.Item>  
+              <Dropdown.Item divider />  
+              <Dropdown.Item eventKey="Reset Block" onSelect={this.chooseTheme}>Default Theme</Dropdown.Item>  
+            </SplitButton>  
+          </div>    
+        </div>  
+      </div>  
+    );   
+  }   
+}  
+export default ThemeSwitcher;  
+```
+
+Now, update the src/index.js file with the following snippet.
+
+<!--style="font-size:30px"-->
+App.js
+
+```markdown
+import 'bootstrap/dist/css/bootstrap.min.css';  
+import React from 'react';  
+import ReactDOM from 'react-dom';  
+import App from './App.js';  
+import './index.css';  
+import ThemeSwitcher from './ThemeSwitcher';  
+  
+ReactDOM.render(<ThemeSwitcher />, document.getElementById('root'));  
+```
+<!--style="font-size:30px"-->
+Output
+
+When we execute the React app, we should get the output as below.
+
+![image](images/react-bootstrap2.png)
+
+Click on the dropdown menu. We will get the following screen.
+
+![image](images/react-bootstrap3.png)
+
+Now, if we choose the Success Theme, we will get the below screen.
+
+![image](images/react-bootstrap4.png)
+
+
+<!--style="font-size:30px"-->
+Using reactstrap
+
+Let us create a new React app using the create-react-app command as follows.
+
+---> $ npx create-react-app reactstrap-app  
+
+Next, install the reactstrap via the npm package. To install reactstrap, navigate to the React app folder, 
+
+and run the following command.
+
+---> $ npm install bootstrap reactstrap --save  
+
+<!--style="font-size:20px"-->
+Importing Bootstrap
+
+Now, open the src/index.js file and add the following code to import the Bootstrap file.
+
+---> import 'bootstrap/dist/css/bootstrap.min.css'; 
+
+
+# React Table
+
+A table is an arrangement which organizes information into rows and columns. It is used to store and display 
+
+data in a structured format.
+
+The react-table is a lightweight, fast, fully customizable (JSX, templates, state, styles, callbacks), and 
+
+extendable Datagrid built for React. It is fully controllable via optional props and callbacks.
+
+<!--style="font-size:30px"-->
+Features
+
+1. It is lightweight at 11kb (and only need 2kb more for styles).
+
+2. It is fully customizable (JSX, templates, state, styles, callbacks).
+
+3. It is fully controllable via optional props and callbacks.
+
+4. It has client-side & Server-side pagination.
+
+5. It has filters.
+
+6. Pivoting & Aggregation
+
+7. Minimal design & easily themeable
+
+<!--style="font-size:30px"-->
+Installation
+
+Let us create a React app using the following command.
+
+---> $ npx create-react-app myreactapp  
+
+Next, we need to install react-table. We can install react-table via npm command, which is given below.
+
+---> $ npm install react-table  
+
+Once, we have installed react-table, we need to import the react-table into the react component. To do this, 
+
+open the src/App.js file and add the following snippet.
+
+---> import ReactTable from "react-table";  
+
+Example 1: Here App.js is the default component. At first, we will see how to create a table using the 
+
+hardcoded values. Later we will see how to dynamically render the data from an array inside the table. 
+
+<!--style="font-size:20px"-->
+Filename: App.js
+
+
+```markdown
+
+import './App.css';
+  
+function App() {
+  return (
+    <div className="App">
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Gender</th>
+        </tr>
+        <tr>
+          <td>Anom</td>
+          <td>19</td>
+          <td>Male</td>
+        </tr>
+        <tr>
+          <td>Megha</td>
+          <td>19</td>
+          <td>Female</td>
+        </tr>
+        <tr>
+          <td>Subham</td>
+          <td>25</td>
+          <td>Male</td>
+        </tr>
+      </table>
+    </div>
+  );
+}
+  
+export default App;
+```
+
+In the above example, we just simply used the HTML table elements which are `<table>`, `<tr>`, `<th>`, and `<td> `
+
+elements. 
+
+Example 2: Now lets us see how we can dynamically render data from an array. Instead of manually iterating 
+
+over the array using a loop, we can simply use the inbuilt Array.map() method. The Array.map() method allows 
+
+you to iterate over an array and modify its elements using a callback function. The callback function will 
+
+then be executed on each of the array’s elements. In this case, we will just return a table row on each 
+
+iteration.
+
+<!--style="font-size:20px"-->
+Filename: App.js
+
+```markdown
+
+import './App.css';
+  
+// Example of a data array that
+// you might receive from an API
+const data = [
+  { name: "Anom", age: 19, gender: "Male" },
+  { name: "Megha", age: 19, gender: "Female" },
+  { name: "Subham", age: 25, gender: "Male"},
+]
+  
+function App() {
+  return (
+    <div className="App">
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Gender</th>
+        </tr>
+        {data.map((val, key) => {
+          return (
+            <tr key={key}>
+              <td>{val.name}</td>
+              <td>{val.age}</td>
+              <td>{val.gender}</td>
+            </tr>
+          )
+        })}
+      </table>
+    </div>
+  );
+}
+  
+export default App;
+```
+
+Filename: App.css Now, let’s edit the file named App.css to style the table.
+
+```css
+.App {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+table {
+  border: 2px solid forestgreen;
+  width: 800px;
+  height: 200px;
+}
+  
+th {
+  border-bottom: 1px solid black;
+}
+  
+td {
+  text-align: center;
+}
+```
+
+![image](images/Screenshot20211017145400.png)
+
+
+
+# React Code Splitting
+
+* First you need to understand how most frameworks work.
+
+Since many bundle all dependencies into one large file, which makes it easy to add JavaScript to an HTML page.
+
+In theory, bundling JavaScript in this way should speed up page loading and reduce the amount of traffic 
+
+pages have to handle.
+
+* But as an application grows, the size of its bundles also grows and, at some point, its bundles will be so 
+
+large that they will take a long time to load.
+
+* This is where the code splitting technique comes in. Code splitting consists of separating the code into  
+
+several packages or components that can be loaded on demand or in parallel. This means that they are not 
+
+loaded until they are needed.
+
+<!--style="font-size:20px"-->
+* The benefits of code splitting are:
+
+1. The speed at which a website loads and displays content becomes faster.
+
+2. The interaction time improves.
+
+3. The percentage of users who abandon the web page without interacting with it decreases.
+
+<!--style="font-size:20px"-->
+* Drawback of code splitting:
+
+1. Although you may not realize it, code splitting requires downloading some data after the page is 
+
+initialized.
+
+2. When the internet connection is down, additional modules cannot be loaded. You need to ensure the user 
+
+receives an appropriate message in this situation.
+
+3. Additional logic is required to load multiple modules when needed.
+
+4. To inject each of the bundles into the application, it is necessary to have a header file.
+
+5. As a result, loading additional code chunks causes a slight delay (especially when the page or website is 
+
+loading for the first time).
+
+
+![image](images/codesplitting.jpg)
+
+
+<!--style="font-size:30px"-->
+* Dynamic imports
+
+
+ Perhaps the simplest way to split code in React is with the dynamic “import” syntax. Some bundlers can 
+
+parse dynamic import statements natively, while others require some configuration. The dynamic import syntax 
+
+works for both static site generation and server-side rendering.
+
+ Dynamic imports use the then function to import only the code that is needed. Any call to the imported code 
+
+must be inside that function.
+
+```markdown
+
+import("./parseText").then(parseText => {
+  console.log(parseText.count("This is a text string", "text"));
+});
+```
+
+<!--style="font-size:30px"-->
+* React.lazy
+
+React.lazy allows for lazy loading of imports in many contexts. It is not yet available for server-side 
+
+rendering, but its diversity of functions makes up for that. The React.lazy function allows you to 
+
+dynamically import a dependency and render that dependency as a component in a single line of code. The 
+
+component must be rendered inside another component that shows fallback content if the dynamic import fails.
+
+This can include error content, although this is not required. If error content is included, it must be 
+
+included in a special type of component called an Error Boundary. The Error Boundary component must be above 
+
+any components that are dynamically loaded to make sure they display properly.
+
+<!--style="font-size:20px"-->
+Before
+
+```markdown
+
+import ExampleComponent from './ExampleComponent';  
+  
+function MyComponent() {  
+  return (  
+    <div>  
+      <ExampleComponent />  
+    </div>  
+  );  
+}
+```  
+
+<!--style="font-size:20px"-->
+After
+
+```markdown
+const ExampleComponent = React.lazy(() => import('./ExampleComponent'));  
+  
+function MyComponent() {  
+  return (  
+    <div>  
+      <ExampleComponent />  
+    </div>  
+  );  
+} 
+``` 
+
+<!--style="font-size:30px"-->
+* Suspense
+
+If the module which contains the ExampleComponent is not yet loaded by the function component(MyComponent), 
+
+then we need to show some fallback content while we are waiting for it to load. We can do this using the 
+
+suspense component. In other words, the suspense component is responsible for handling the output when the 
+
+lazy component is fetched and rendered.
+
+```markdown
+
+const ExampleComponent = React.lazy(() => import('./ ExampleComponent'));  
+  
+function MyComponent() {  
+  return (  
+    <div>  
+      <Suspense fallback={<div>Loading...</div>}>  
+        <ExampleComponent />  
+      </Suspense>  
+    </div>  
+  );  
+}  
+```
+
+The fallback prop accepts the React elements which you want to render while waiting for the component to 
+
+load. We can combine multiple lazy components with a single Suspense component. It can be seen in the below 
+
+example.
+
+```markdown
+
+const ExampleComponent = React.lazy(() => import('./ ExampleComponent'));  
+const ExamComponent = React.lazy(() => import('./ ExamComponent'));  
+  
+function MyComponent() {  
+  return (  
+    <div>  
+      <Suspense fallback={<div>Loading...</div>}>  
+        <section>  
+          <ExampleComponent />  
+          <ExamComponent />  
+        </section>  
+      </Suspense>  
+    </div>  
+  );  
+}  
+```
+
+Note: React.lazy and Suspense components are not yet available for server-side rendering. For code-splitting 
+
+in a server-rendered app, it is recommended to use Loadable Components.
+
+<!--style="font-size:30px"-->
+* Error boundaries
+
+If any module fails to load, for example, due to network failure, we will get an error. We can handle these 
+
+errors with Error Boundaries. Once we have created the Error Boundary, we can use it anywhere above our lazy 
+
+components to display an error state.
+
+```markdown
+
+import MyErrorBoundary from './MyErrorBoundary';  
+const ExampleComponent = React.lazy(() => import('./ ExampleComponent'));  
+const ExamComponent = React.lazy(() => import('./ ExamComponent'));  
+  
+const MyComponent = () => (  
+  <div>  
+    <MyErrorBoundary>  
+      <Suspense fallback={<div>Loading...</div>}>  
+        <section>  
+          <ExampleComponent />  
+          <ExamComponent />  
+        </section>  
+      </Suspense>  
+    </MyErrorBoundary>  
+  </div>  
+);  
+```
+
+<!--style="font-size:30px"-->
+* Route-based code splitting
+
+It is very tricky to decide where we introduce code splitting in the app. For this, we have to make sure that 
+
+we choose the place which will split the bundles evenly without disrupting the user experience.
+
+The route is the best place to start the code splitting. Route based code splitting is essential during the 
+
+page transitions on the web, which takes some amount of time to load. Here is an example of how to setup 
+
+route-based code splitting into the app using React Router with React.lazy.
+
+```markdown
+
+import { Switch, BrowserRouter as Router, Route} from 'react-router-dom';  
+import React, { Suspense, lazy } from 'react';  
+  
+const Home = lazy(() => import('./routes/Home'));  
+const About = lazy(() => import('./routes/About'));  
+const Contact = lazy(() => import('./routes/Contact'));  
+  
+const App = () => (  
+  <Router>  
+    <Suspense fallback={<div>Loading...</div>}>  
+      <Switch>  
+        <Route exact path="/" component={Home}/>  
+        <Route path="/about" component={About}/>  
+        <Route path="/contact" component={Contact}/>  
+      </Switch>  
+    </Suspense>  
+  </Router>  
+);  
+```
+
+<!--style="font-size:30px"-->
+* Named Export
+
+Currently, React.lazy supports default exports only. If any module you want to import using named exports, you need to create an intermediate module that re-exports it as the default. We can understand it from the below example.
+
+<!--style="font-size:20px"-->
+ExampleComponents.js
+
+```markdown
+export const MyFirstComponent = /* ... */;  
+export const MySecondComponent = /* ... */;  
+```
+
+<!--style="font-size:20px"-->
+MyFirstComponent.js
+
+```markdown
+export { MyFirstComponent as default } from "./ExampleComponents.js";  
+```
+
+<!--style="font-size:20px"-->
+MyApp.js
+
+```markdown
+import React, { lazy } from 'react';  
+const MyFirstComponent = lazy(() => import("./MyFirstComponent.js"));  
+```
+
+# React Hooks
+
+React Hooks open up a completely new approach to constructing functional components, enabling us to include 
+
+capabilities like stateful logic that are only available for class components.
+
+React mostly makes use of its built−in hooks, useState and useEffect Hooks, to do this. These hooks j
+
+In this article, we will go over what hooks are and how they can be used to create applications with React. 
+
+We will also see how they simplify everyday development workflows.
+
+<!--style="font-size:30px"-->
+All About React Hooks
+
+As quoted by team React−
+
+* “React Hooks are a new feature of React.js that makes it possible to use state and other React features without writing a class.”
+
+They simplify the way we use React.js by removing the need for class components and render methods, and instead enable us to use functions as hooks.
+
+They were announced at the end of 2018 with version 16.7 of React and were officially released in version 16.8, which was released in March 2019.
+
+React Hooks act as a replacement for the class system. It is an alternative approach to React’s component model that allows us to avoid unnecessary abstraction and to provide an alternative way of handling stateful logic that doesn't require inheritance or higher−order components (HOC).
+
+They eliminate the requirement to construct a class, which was the sole option in the past, and enable developers to access state and other React capabilities.
+
+However, here are some general rules for hooks that every developer must keep in mind −
+
+* Hooks should be used in the topmost scope of the code and never to be used within loops, conditions, or nested functions.
+
+* Hooks should only be used by React function components.
+
+* Don't use ordinary JavaScript methods to call Hook
+
+Note − These rules are also applicable for custom hooks.
+
+<!--style="font-size:30px"-->
+Benefits with React Hooks
+
+
+<!--style="font-size:20px"-->
+* Easy−to−understand complex components
+
+In the past, the developers had to maintain parts that at first were straightforward but eventually turned 
+
+into an unmanageable jumble of stateful logic. As a result, getting errors and inconsistencies became a 
+
+normal thing. Instead of requiring a split based on lifecycle methods, hooks allow you to divide a single 
+
+component into separate functions based on how its constituent parts are related.
+
+<!--style="font-size:20px"-->
+* Reduced Complexity without Classes (with functions!)
+
+Learning React can be quite difficult because of classes. Props, state, and the downward data flow are 
+
+concepts that people can grasp very well, but still have difficulty understanding in classes. Even among 
+
+seasoned React developers, arguments over the distinction between function and class components can be seen 
+
+frequently.
+
+Contrarily, hooks allow you to embrace functions and use more React capabilities without the need to 
+
+understand intricate functional or reactive programming techniques.
+
+<!--style="font-size:20px"-->
+* Easy to reuse Stateful Logic
+
+You can remove stateful logic from a component using hooks so that it can be tested separately and used 
+
+again. You can reuse stateful logic with hooks without altering the component structure which was very 
+
+difficult earlier even the higher−order components and render props couldn’t manage to do it.
+
+Sharing Hooks amongst numerous components or with the community is now way too simple.
+
+<!--style="font-size:30px"-->
+* Rules of Hooks
+
+Hooks are similar to JavaScript functions, but you need to follow these two rules when using them. Hooks rule 
+
+ensures that all the stateful logic in a component is visible in its source code. These rules are:-
+
+
+<!--style="font-size:20px"-->
+1. Only call Hooks at the top level
+
+Do not call Hooks inside loops, conditions, or nested functions. Hooks should always be used at the top level 
+
+of the React functions. This rule ensures that Hooks are called in the same order each time a components 
+
+renders.
+
+<!--style="font-size:20px"-->
+2. Only call Hooks from React functions
+
+You cannot call Hooks from regular JavaScript functions. Instead, you can call Hooks from React function 
+
+components. Hooks can also be called from custom Hooks.
+
+<!--style="font-size:30px"-->
+Pre-requisites for React Hooks
+
+1. Node version 6 or above
+
+2. NPM version 5.2 or above
+
+3. Create-react-app tool for running the React App
+
+<!--style="font-size:30px"-->
+React Hooks Installation
+
+To use React Hooks, we need to run the following commands:
+
+```markdown
+$ npm install react@16.8.0-alpha.1 --save  
+
+$ npm install react-dom@16.8.0-alpha.1 --save  
+```
+
+The above command will install the latest React and React-DOM alpha versions which support React Hooks. Make 
+
+sure the package.json file lists the React and React-DOM dependencies as given below.
+
+```json
+"react": "^16.8.0-alpha.1",  
+
+"react-dom": "^16.8.0-alpha.1",  
+```
+
+## useState
+
+The useState() is a Hook that allows you to have state variables in functional components . so basically 
+
+useState is the ability to encapsulate local state in a functional component. React has two types of 
+
+components, one is class components which are ES6 classes that extend from React and the other is functional 
+
+components. Class components a Component and can have state and lifecycle methods: class Message extends 
+
+React. The  useState hook is a special function that takes the initial state as an argument and returns an 
+
+array of two entries.  UseState encapsulate only singular value from the state, for multiple state need to 
+
+have useState calls.
+
+<!--style="font-size:20px"-->
+Syntax: 
+
+The first element is the initial state and the second one is a function that is used for updating the state.
+
+```markdown
+const [state, setState] = useState(initialstate)
+```
+
+We can also pass a function as an argument if the initial state has to be computed. And the value returned by 
+
+the function will be used as the initial state.
+
+```markdown
+const [sum, setsum] = useState(function generateRandomInteger(){5+7);})
+```
+
+The above function is oneline function which computes the sum of two numbers and will be set as the initial 
+
+state.
+
+<!--style="font-size:20px"-->
+Importing:
+
+To use useState you need to import useState from react as shown below:
+
+```markdown
+import React, { useState } from "react"
+```
+
+<!--style="font-size:20px"-->
+Example:
+
+Below is the implementation of useState() function.
+
+```markdown
+import React, { useState } from "react";
+
+function App(props) {
+const [count, setRandomCount] =
+	useState(function generateRandomInteger() {
+	return Math.floor(Math.random() * 100);
+});
+function clickHandler(e) {
+	setRandomCount(Math.floor(Math.random() * 100));
+}
+return (
+	<div style={{margin: 'auto', width: 100, display: 'block'}}>
+	<h1> {count} </h1>
+	
+	
+<p>
+		<button onClick={clickHandler}> Click </button>
+	</p>
+
+
+	</div>
+);
+}
+
+export default App
+```
+
+## useEffect
+
+The Effect Hook allows us to perform side effects (an action) in the function components. It does not use 
+
+components lifecycle methods which are available in class components. In other words, Effects Hooks are 
+
+equivalent to componentDidMount(), componentDidUpdate(), and componentWillUnmount() lifecycle methods.
+
+Side effects have common features which the most web applications need to perform, such as:
+
+1. Updating the DOM,
+
+2. Fetching and consuming data from a server API,
+
+3. Setting up a subscription, etc.
+
+<!--style="font-size:20px"-->
+Example:
+
+```markdown
+import React, { useState, useEffect } from 'react';  
+  
+function CounterExample() {  
+  const [count, setCount] = useState(0);  
+  
+  // Similar to componentDidMount and componentDidUpdate:  
+  useEffect(() => {  
+    // Update the document title using the browser API  
+    document.title = `You clicked ${count} times`;  
+  });  
+  
+  return (  
+    <div>  
+      <p>You clicked {count} times</p>  
+      <button onClick={() => setCount(count + 1)}>  
+        Click me  
+      </button>  
+    </div>  
+  );  
+}  
+export default CounterExample;  
+```
+
+* In React component, there are two types of side effects:
+
+1. Effects Without Cleanup
+
+2. Effects With Cleanup
+
+<!--style="font-size:20px"-->
+Effects without Cleanup
+
+It is used in useEffect which does not block the browser from updating the screen. It makes the app more 
+
+responsive. The most common example of effects which don't require a cleanup are manual DOM mutations, 
+
+Network requests, Logging, etc.
+
+<!--style="font-size:20px"-->
+Effects with Cleanup
+
+Some effects require cleanup after DOM updation. For example, if we want to set up a subscription to some 
+
+external data source, it is important to clean up memory so that we don't introduce a memory leak. React 
+
+performs the cleanup of memory when the component unmounts. However, as we know that, effects run for every 
+
+render method and not just once. Therefore, React also cleans up effects from the previous render before 
+
+running the effects next time.
+
+## useContext
+
+Context provides a way to pass data or state through the component tree without having to pass props down 
+
+manually through each nested component. It is designed to share data that can be considered as global data 
+
+for a tree of React components, such as the current authenticated user or theme(e.g. color, paddings, 
+
+margins, font-sizes).
+
+Context API uses Context. Provider and Context. Consumer Components pass down the data but it is very 
+
+cumbersome to write the long functional code to use this Context API. So useContext hook helps to make the 
+
+code more readable, less verbose and removes the need to introduce Consumer Component. The useContext hook is 
+
+the new addition in React 16.8. 
+
+<!--style="font-size:20px"-->
+Syntax:
+
+```markdown
+const authContext = useContext(initialValue);
+```
+
+The useContext accepts the value provided by React.createContext and then re-render the component whenever 
+
+its value changes but you can still optimize its performance by using memoization.
+
+<!--style="font-size:20px"-->
+Example: 
+
+Program to demonstrate the use of useContext Hook. In this example, we have a button, whenever we click on 
+
+the button the onClick handler is getting triggered and it changes the authentication status(with a default 
+
+value to Nopes) with the help of the useContext hook. Let’s see the output of the above code:
+
+<!--style="font-size:20px"-->
+auth-context.js
+
+```markdown
+import React from 'react';
+ 
+// Creating the context object and passing the default values.
+const authContext = React.createContext({status:null,login:()=>{}});
+ 
+export default authContext;
+```
+
+<!--style="font-size:20px"-->
+App.js
+
+```markdown
+import React, { useState } from "react";
+import Auth from "./Auth";
+import AuthContext from "./auth-context";
+
+const App = () => {
+//using the state to dynamicallly pass the values to the context
+
+const [authstatus, setauthstatus] = useState(false);
+const login = () => {
+	setauthstatus(true);
+};
+return (
+	<React.Fragment>
+	<AuthContext.Provider value={{ status: authstatus, login: login }}>
+		<Auth />
+	</AuthContext.Provider>
+	</React.Fragment>
+);
+};
+export default App;
+```
+
+<!--style="font-size:20px"-->
+Auth.js
+
+```markdown
+import React, { useContext } from "react";
+import AuthContext from "./auth-context";
+
+const Auth = () => {
+// Now all the data stored in the context can
+// be accessed with the auth variable
+const auth = useContext(AuthContext);
+console.log(auth.status);
+return (
+	<div>
+	<h1>Are you authenticated?</h1>
+	{auth.status ?
+
+<p>Yes you are</p>
+
+:
+
+<p>Nopes</p>
+
+}
+
+	<button onClick={auth.login}>Click To Login</button>
+	</div>
+);
+};
+export default Auth;
+```
+
+## useRef
+
+The useRef Hook allows you to persist values between renders.
+
+It can be used to store a mutable value that does not cause a re-render when updated.
+
+It can be used to access a DOM element directly.
+
+<!--style="font-size:30px"-->
+Does Not Cause Re-renders
+
+If we tried to count how many times our application renders using the useState Hook, we would be caught in an 
+
+infinite loop since this Hook itself causes a re-render.
+
+To avoid this, we can use the useRef Hook.
+
+<!--style="font-size:20px"-->
+Example:
+
+Use useRef to track application renders.
+
+```markdown
+import { useState, useEffect, useRef } from "react";
+import ReactDOM from "react-dom/client";
+
+function App() {
+  const [inputValue, setInputValue] = useState("");
+  const count = useRef(0);
+
+  useEffect(() => {
+    count.current = count.current + 1;
+  });
+
+  return (
+    <>
+      <input
+        type="text"
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
+      />
+      <h1>Render Count: {count.current}</h1>
+    </>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
+```
+
+useRef() only returns one item. It returns an Object called current.
+
+When we initialize useRef we set the initial value: useRef(0).
+
+It's like doing this: const count = {current: 0}. We can access the count by using count.current.
+
+Run this on your computer and try typing in the input to see the application render count increase.
+
+<!--style="font-size:30px"-->
+Accessing DOM Elements
+
+In general, we want to let React handle all DOM manipulation.
+
+But there are some instances where useRef can be used without causing issues.
+
+In React, we can add a ref attribute to an element to access it directly in the DOM.
+
+<!--style="font-size:20px"-->
+Example:
+
+Use useRef to focus the input:
+
+```markdown
+import { useRef } from "react";
+import ReactDOM from "react-dom/client";
+
+function App() {
+  const inputElement = useRef();
+
+  const focusInput = () => {
+    inputElement.current.focus();
+  };
+
+  return (
+    <>
+      <input type="text" ref={inputElement} />
+      <button onClick={focusInput}>Focus Input</button>
+    </>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
+```
+
+<!--style="font-size:30px"-->
+Tracking State Changes
+
+The useRef Hook can also be used to keep track of previous state values.
+
+This is because we are able to persist useRef values between renders.
+
+<!--style="font-size:20px"-->
+Example:
+
+Use useRef to keep track of previous state values:
+
+```markdown
+import { useState, useEffect, useRef } from "react";
+import ReactDOM from "react-dom/client";
+
+function App() {
+  const [inputValue, setInputValue] = useState("");
+  const previousInputValue = useRef("");
+
+  useEffect(() => {
+    previousInputValue.current = inputValue;
+  }, [inputValue]);
+
+  return (
+    <>
+      <input
+        type="text"
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
+      />
+      <h2>Current Value: {inputValue}</h2>
+      <h2>Previous Value: {previousInputValue.current}</h2>
+    </>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
+```
+
+This time we use a combination of useState, useEffect, and useRef to keep track of the previous state.
+
+In the useEffect, we are updating the useRef current value each time the inputValue is updated by entering 
+
+text into the input field.
+
+## useReducer
+
+The useReducer Hook is similar to the useState Hook.
+
+It allows for custom state logic.
+
+If you find yourself keeping track of multiple pieces of state that rely on complex logic, useReducer may be 
+
+useful.
+
+<!--style="font-size:20px"-->
+Syntax
+
+The useReducer Hook accepts two arguments.
+
+```markdown
+useReducer(<reducer>, <initialState>)
+```
+
+The reducer function contains your custom state logic and the initialStatecan be a simple value but generally 
+
+will contain an object.
+
+The useReducer Hook returns the current stateand a dispatchmethod.
+
+Here is an example of useReducer in a counter app:
+
+<!--style="font-size:20px"-->
+Example
+
+```markdown
+import { useReducer } from "react";
+import ReactDOM from "react-dom/client";
+
+const initialTodos = [
+  {
+    id: 1,
+    title: "Todo 1",
+    complete: false,
+  },
+  {
+    id: 2,
+    title: "Todo 2",
+    complete: false,
+  },
+];
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "COMPLETE":
+      return state.map((todo) => {
+        if (todo.id === action.id) {
+          return { ...todo, complete: !todo.complete };
+        } else {
+          return todo;
+        }
+      });
+    default:
+      return state;
+  }
+};
+
+function Todos() {
+  const [todos, dispatch] = useReducer(reducer, initialTodos);
+
+  const handleComplete = (todo) => {
+    dispatch({ type: "COMPLETE", id: todo.id });
+  };
+
+  return (
+    <>
+      {todos.map((todo) => (
+        <div key={todo.id}>
+          <label>
+            <input
+              type="checkbox"
+              checked={todo.complete}
+              onChange={() => handleComplete(todo)}
+            />
+            {todo.title}
+          </label>
+        </div>
+      ))}
+    </>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Todos />);
+```
+
+## useCallback
+
+The useCallback hook is used when you have a component in which the child is rerendering again and again 
+
+without need.
+
+Pass an inline callback and an array of dependencies. useCallback will return a memoized version of the 
+
+callback that only changes if one of the dependencies has changed. This is useful when passing callbacks to 
+
+optimized child components that rely on reference equality to prevent unnecessary renders.
+
+<!--style="font-size:20px"-->
+Syntax:
+
+```markdown
+const memoizedCallback = useCallback(
+ () => {
+   doSomething(a, b);
+ },
+ [a, b],
+);
+```
+
+<!--style="font-size:20px"-->
+Without useCallback Hook:
+
+The problem is that once the counter is updated, all three functions are recreated again. The alert increases 
+
+by three at a time but if we update some states all the functions related to that states should only 
+
+re-instantiated. If another state value is unchanged, it should not be touched. Here, the filename is App.js
+
+```markdown
+import React, { useState, useCallback } from 'react'
+const funccount = new Set();
+const App = () => {
+
+
+const [count, setCount] = useState(0)
+const [number, setNumber] = useState(0)
+
+const incrementCounter = () => {
+	setCount(count + 1)
+}
+const decrementCounter = () => {
+	setCount(count - 1)
+}
+
+const incrementNumber = () => {
+	setNumber(number + 1)
+}
+
+funccount.add(incrementCounter);
+funccount.add(decrementCounter);
+funccount.add(incrementNumber);
+alert(funccount.size);
+
+return (
+	<div>
+	Count: {count}
+	<button onClick={incrementCounter}>
+		Increase counter
+	</button>
+	<button onClick={decrementCounter}>
+		Decrease Counter
+	</button>
+	<button onClick={incrementNumber}>
+		increase number
+	</button>
+	</div>
+)
+}
+
+
+export default App;
+```
+
+<!--style=font-size:20px"-->
+With useCallback hook: 
+
+To solve this problem we can use the useCallback hook. Here, the filename is App.js.
+
+```markdown
+import React, { useState, useCallback } from 'react'
+var funccount = new Set();
+const App = () => {
+
+
+const [count, setCount] = useState(0)
+const [number, setNumber] = useState(0)
+
+const incrementCounter = useCallback(() => {
+setCount(count + 1)
+}, [count])
+const decrementCounter = useCallback(() => {
+setCount(count - 1)
+}, [count])
+const incrementNumber = useCallback(() => {
+setNumber(number + 1)
+}, [number])
+
+funccount.add(incrementCounter);
+funccount.add(decrementCounter);
+funccount.add(incrementNumber);
+alert(funccount.size);
+
+return (
+	<div>
+	Count: {count}
+	<button onClick={incrementCounter}>
+		Increase counter
+	</button>
+	<button onClick={decrementCounter}>
+		Decrease Counter
+	</button>
+	<button onClick={incrementNumber}>
+		increase number
+	</button>
+	</div>
+)
+}
+
+
+export default App;
+```
+
+<!--style="font-size:20px"-->
+Output:
+
+As we can see from the below output when we change the state ‘count’ then two functions will re-instantiated 
+
+so the set size will increase by 2 and when we update the state ‘number’ then only one function will 
+
+re-instantiated and the size of the set will increase by only one.
+
+
+## useMemo
+
+The useMemo is a hook used in the functional component of react that returns a memoized value. In Computer 
+
+Science, memoization is a concept used in general when we don’t need to recompute the function with a given 
+
+argument for the next time as it returns the cached result. A memoized function remembers the results of 
+
+output for a given set of inputs. For example, if there is a function to add two numbers, and we give the 
+
+parameter as 1 and 2 for the first time the function will add these two numbers and return 3, but if the same 
+
+inputs come again then we will return the cached value i.e 3 and not compute with the add function again. In 
+
+react also, we use this concept, whenever in the React component, the state and props do not change the 
+
+component and the component does not re-render, it shows the same output. The useMemo hook is used to improve 
+
+performance in our React application.
+
+<!--style="font-size:20px"-->
+Syntax:
+
+```markdown
+const memoizedValue = useMemo(functionThatReturnsValue, arrayDependencies)
+```
+
+<!--style="font-size:20px"-->
+Example: 
+
+When we don’t use the useMemo Hook.
+
+```markdown
+import React, {useState} from 'react';
+
+function App() {
+const [number, setNumber] = useState(0)
+const squaredNum = squareNum(number);
+const [counter, setCounter] = useState(0);
+
+// Change the state to the input
+const onChangeHandler = (e) => {
+	setNumber(e.target.value);
+}
+
+// Increases the counter by 1
+const counterHander = () => {
+	setCounter(counter + 1);
+}
+return (
+	<div className="App">
+	<h1>Welcome to Geeksforgeeks</h1>
+	<input type="number" placeholder="Enter a number"
+		value={number} onChange={onChangeHandler}>
+	</input>
+	
+	<div>OUTPUT: {squaredNum}</div>
+	<button onClick= {counterHander}>Counter ++</button>
+	<div>Counter : {counter}</div>
+	</div>
+);
+}
+
+// function to square the value
+function squareNum(number){
+console.log("Squaring will be done!");
+return Math.pow(number, 2);
+}
+
+export default App;
+```
+
+<!--style="font-size:20px"-->
+Output: 
+
+In the above example, we have an App component and this component is doing two things one is squaring a 
+
+number on the given input and incrementing the counter. We have two states here number and counter, whenever 
+
+any of the states change the component re-renders. For example, if we change the input value of the number 
+
+the function squareNum runs, and if increment the counter again the function squareNum runs. 
+
+<!--style="font-size:20px"-->
+Example: 
+
+When we use useMemo Hook
+
+```markdown
+import React, {useState} from 'react';
+
+function App() {
+const [number, setNumber] = useState(0)
+// Using useMemo
+const squaredNum = useMemo(()=> {
+	return squareNum(number);
+}, [number])
+const [counter, setCounter] = useState(0);
+
+// Change the state to the input
+const onChangeHandler = (e) => {
+	setNumber(e.target.value);
+}
+
+// Increases the counter by 1
+const counterHander = () => {
+	setCounter(counter + 1);
+}
+return (
+	<div className="App">
+	<h1>Welcome to Geeksforgeeks</h1>
+	<input type="number" placeholder="Enter a number"
+		value={number} onChange={onChangeHandler}>
+	</input>
+	
+	<div>OUTPUT: {squaredNum}</div>
+	<button onClick= {counterHander}>Counter ++</button>
+	<div>Counter : {counter}</div>
+	</div>
+);
+}
+
+// function to square the value
+function squareNum(number){
+console.log("Squaring will be done!");
+return Math.pow(number, 2);
+}
+
+export default App;
+```
+
+<!--style="font-size:20px"-->
+Output: 
+
+Now in the above example, we have used the user memo hook, here the function that returns the value i.e 
+
+squareNum is passed inside the useMemo and inside the array dependencies, we have used the number as the 
+
+squareNum will run only when the number changes. If we increase the counter and the number remains the same 
+
+in the input field the squareNum doesn’t run again
+
+
+Now we can see in the console that the squareNum is running only when there is a change in the input box and 
+
+not when the button of the increment counter is clicked.
+
+Note: Memorization is never free, we are trading space for time. 
+
+## custom hook
+
+Using custom hooks is an effective option in a case where we want to implement the derived functionality of 
+
+both the useState and useEffect Hooks across many components.
+
+We can simply reuse stateful behaviour across several components using custom React Hooks in a style that is 
+
+both efficient and scalable. Additionally, custom hooks result in a clear and organized codebase, which 
+
+lessens complexity and duplication in your React project.
+
+As long as they adhere to the React Hooks standards, you are free to develop whatever custom hook you want to 
+
+handle various logical scenarios.
+
+Custom Hooks start with "use". Example: useFetch.
+
+All the rules and usage guidelines are the same as that of the predefined ReactJS hooks like −
+
+* Call Hooks at the Top Level
+
+* Call Hooks from React Functions only
+
+<!--style="font-size:20px"-->
+Example
+
+In this example, we will build an input validator application that will display some text based on the 
+
+user-defined conditions in the custom hook.
+
+<!--style="font-size:20px"-->
+App.jsx
+
+```markdown
+import React from 'react';
+import useForm from './CustomHook';
+
+const App = () => {
+   const input = useForm();
+   return (
+      <div>
+      <input onChange={input.onChange} value={input.value} />
+      {input.valid ? 'Welcome to TutorialsPoint' : 'Try again'}
+      </div>
+   );
+};
+export default App;
+```
+
+customHook.jsx
+
+```markdown
+import React, { useState } from 'react';
+
+const useForm = () => {
+   const [val, setVal] = useState('');
+   const [valid, setValid] = useState(false);
+
+   const inputHandler = (e) => {
+      setVal(e.target.value);
+      e.target.value === 'TutorialsPoint' ? setValid(true) : setValid(false);
+   };
+   return { value: val, onChange: inputHandler, valid };
+};
+
+export default useForm;
+```
+
+In the above example, when the user types in the input field, then the custom hook is called which decides 
+
+whether the text is valid or not based on certain conditions.
+
+# React Error Boundaries
+
+A JavaScript error in a part of the UI shouldn’t break the whole app. To solve this problem for React users, 
+
+React 16 introduces a new concept of an “error boundary”.
+
+Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, 
+
+log those errors, and display a fallback UI instead of the component tree that crashed. Error boundaries 
+
+catch errors during rendering, in lifecycle methods, and in constructors of the whole tree below them.
+
+<!--style="font-size:20px;color-blue;"-->
+Note:
+
+Error boundaries do not catch errors for:
+
+* Event handlers 
+
+* Asynchronous code (e.g. setTimeout or requestAnimationFrame callbacks)
+
+* Server side rendering
+
+* Errors thrown in the error boundary itself (rather than its children)
+
+<!--style="font-size:30px"-->
+* Error boundary in class
+
+A class component can becomes an error boundary if it defines a new lifecycle methods either static 
+
+getDerivedStateFromError() or componentDidCatch(error, info). We can use static getDerivedStateFromError() to 
+
+render a fallback UI when an error has been thrown, and can use componentDidCatch() to log error information.
+
+An error boundary can?t catch the error within itself. If the error boundary fails to render the error 
+
+message, the error will go to the closest error boundary above it. It is similar to the catch {} block in 
+
+JavaScript.
+
+<!--style="font-size:20px"-->
+How to implement error boundaries
+
+Step-1 Create a class which extends React component and passes the props inside it.
+
+Step-2 Now, add componentDidCatch() method which allows you to catch error in the components below them in 
+
+the tree.
+
+Step-3 Next add render() method, which is responsible for how the component should be rendered. For example, 
+
+it will display the error message like "Something is wrong."
+
+<!--style="font-size:20px"-->
+Example
+
+```markdown
+class ErrorBoundary extends React.Component {  
+  constructor(props) {  
+    super(props);  
+    this.state = { hasError: false };  
+  }  
+  static getDerivedStateFromError(error) {  
+    // It will update the state so the next render shows the fallback UI.  
+    return { hasError: true };  
+  }  
+  componentDidCatch(error, info) {  
+    // It will catch error in any component below. We can also log the error to an error reporting service.  
+    logErrorToMyService(error, info);  
+  }  
+  render() {  
+    if (this.state.hasError) {  
+        return (  
+        <div>Something is wrong.</div>;  
+    );  
+    }  
+    return this.props.children;   
+  }  
+}  
+```
+
+Step-4 Now, we can use it as a regular component. Add the new component in HTML, which you want to include in 
+
+the error boundary. In this example, we are adding an error boundary around a MyWidgetCounter component.
+
+```htm
+<ErrorBoundary>  
+       <MyWidgetCounter/>  
+</ErrorBoundary> 
+``` 
+
+<!--style="font-size:30px"-->
+* Where to Place Error Boundaries
+
+An error boundary entirely depends on you. You can use error boundaries on the top-level of the app 
+
+components or wrap it on the individual components to protect them from breaking the other parts of the app.
+
+Let us see an example.
+
+```markdown
+import React from 'react';  
+import './App.css'  
+  
+class ErrorBoundary extends React.Component {  
+  constructor(props) {  
+    super(props);  
+    this.state = { error: false, errorInfo: null };  
+  }  
+    
+  componentDidCatch(error, errorInfo) {  
+    // Catch errors in any components below and re-render with error message  
+    this.setState({  
+      error: error,  
+      errorInfo: errorInfo  
+    })  
+  }  
+    
+  render() {  
+    if (this.state.errorInfo) {  
+      return (  
+        <div>  
+          <h2>Something went wrong.</h2>  
+          <details style={{ whiteSpace: 'pre-wrap' }}>  
+            {this.state.error && this.state.error.toString()}  
+            <br />  
+            {this.state.errorInfo.componentStack}  
+          </details>  
+        </div>  
+      );  
+    }  
+    return this.props.children;  
+  }    
+}  
+  
+class BuggyCounter extends React.Component {  
+  constructor(props) {  
+    super(props);  
+    this.state = { counter: 0 };  
+    this.handleClick = this.handleClick.bind(this);  
+  }  
+    
+  handleClick() {  
+    this.setState(({counter}) => ({  
+      counter: counter + 1  
+    }));  
+  }  
+    
+  render() {  
+    if (this.state.counter === 3) {  
+      throw new Error('I crashed!');  
+    }  
+    return <h1 onClick={this.handleClick}>{this.state.counter}</h1>;  
+  }  
+}  
+  
+function App() {  
+  return (  
+    <div>  
+      <p><b>Example of Error Boundaries</b></p>  
+      <hr />  
+      <ErrorBoundary>  
+        <p>These two counters are inside the same error boundary.</p>  
+          <BuggyCounter />  
+          <BuggyCounter />  
+      </ErrorBoundary>  
+      <hr />  
+      <p>These two counters are inside of their individual error boundary.</p>  
+        <ErrorBoundary><BuggyCounter /></ErrorBoundary>  
+        <ErrorBoundary><BuggyCounter /></ErrorBoundary>  
+    </div>  
+  );  
+}  
+export default App  
+```
+
+In the above code snippet, when we click on the numbers, it increases the counters. The counter is programmed 
+
+to throw an error when it reaches 3. It simulates a JavaScript error in a component. Here, we used an error 
+
+boundary in two ways, which are given below.
+
+First, these two counters are inside the same error boundary. If anyone crashes, the error boundary will 
+
+replace both of them.
+
+```markdown
+<ErrorBoundary>  
+          <BuggyCounter />  
+          <BuggyCounter />  
+</ErrorBoundary>  
+```
+
+Second, these two counters are inside of their individual error boundary. So if anyone crashes, the other is 
+
+not affected.
+
+```htm
+<ErrorBoundary><BuggyCounter /></ErrorBoundary>  
+<ErrorBoundary><BuggyCounter /></ErrorBoundary>  
+```
+
+<!--style="font-size:20px"-->
+Output:
+
+When we execute the above code, we will get the following output.
+
+![image](images/react-error-boundaries.png)
+
+When the counter has reached at 3, it gives the following output.
+
+![image](images/react-error-boundaries2.png)
+
+
+<!--style="font-size:20px"-->
+New Behavior for Uncaught error
+
+It is an important implication related to error boundaries. If the error does not catch by any error 
+
+boundary, it will result in unmounting of the whole React application.
+
+
+<!--style="font-size:30px"-->
+* Error Boundary in Event Handler
+
+Error boundaries do not allow catching errors inside event handlers. React does not need any error boundary 
+
+to recover from errors in the event handler. If there is a need to catch errors in the event handler, you can 
+
+use JavaScript try-catch statement.
+
+In the below example, you can see how an event handler will handle the errors.
+
+```markdown
+class MyComponent extends React.Component {  
+  constructor(props) {  
+    super(props);  
+    this.state = { error: null };  
+    this.handleClick = this.handleClick.bind(this);  
+  }  
+  
+  handleClick() {  
+    try {  
+      // Do something which can throw error  
+    } catch (error) {  
+      this.setState({ error });  
+    }  
+  }  
+  
+  render() {  
+    if (this.state.error) {  
+      return   
+          <h2>It caught an error.</h2>  
+    }  
+    return <div onClick={this.handleClick}>Click Me</div>  
+  }  
+}  
+```
+
+
+# Unit Testing in React
+
+Unit testing is a method of testing that tests the individual software unit in theprocess of isolation. Check 
+
+the output of a function for any given input.
+
+It means verifying that the component renders for any specific accessory to react components.
+
+In other words, to writing a unit tests is also alike writing code that verifies the code works as expected.
+
+
+<!--style="font-size:20px"-->
+What is the Distinction between Unit Testing, Integration Testing, and End-to-end Testing?
+
+A unit test tests the smallest code unit, which is possible, and any dependencies the component may have.
+
+Integration tests test the work of multiple components that work together. The tests give the best 
+
+understanding of user experiences with the application.
+
+The downside of testing is that finding the component that caused the test to break is more complicated. 
+
+While we failed in unit tests that indicate a problem in a particular component, a broken integration test 
+
+can be caused by many components, and it's not an explicit component that caused it.
+
+End-to-end testing is called user interface testing, which takes integration testing by testing the entire 
+
+system from the user's point of view.
+
+The tests cannot know the system, and it focuses on the system from the point ofview of users.
+
+The tests click by the application and verify the user interface matches the expected results, and it is the 
+
+result of manual and automation testing.
+
+The straightforward thing is to look at the pyramid oftests to explain the tests which will work together:
+
+![image](images/unit-testing-in-react.jpg)
+
+Unit test is the base of the pyramidbecause it is supposed to lay the foundation of tests. Itis easier to 
+
+write and is the best written for writing code and fixingbugs.
+
+<!--style="font-size:20px"-->
+What is the purpose of unit tests?
+
+There are many reasons why unit tests will be helpful. Some of them are below:
+
+* It exercises your code
+
+* It prevents the regressions
+
+* Faster feedback in the development
+
+These are valid points, but the main advantages of writing unit tests are to improving the coding style.
+
+Writing the tests during or before implementing the feature gives us a better idea of the requirements. Write 
+
+the code that is loosely coupled and easier to test. It was with refactoring a code snippet to make it easier 
+
+to test in the first place.
+
+For example, we extract the functions into the separate file to make the code easier to test. After that, the 
+
+result is less coupled.
+
+<!--style="font-size:20px"-->
+* The primary intent of unit tests:
+
+It has prevented us from sending bugs to production on a few occasions.
+
+Unit tests help us with all points. They form the foundation of any solid test suite for a good reason.
+
+
+<!--style="font-size:20px"-->
+When should you write a unit test?
+
+There are so many opinions about when to write the unit tests. We can write by Test-Driven Development (TDD) 
+
+which tells us to write test cases before writing the code, and prefer to write the unit tests when the code 
+
+has been written.
+
+The most significant advantage of unit testing is when you write tests during the actual deployment, that 
+
+doesn't mean we have to follow the advice.
+
+It is the best idea to write test cases in the following situations:
+
+* During or before the implementation of new functionality
+
+* Before and during refactoring
+
+* Before correcting a mistake
+
+
+<!--style="font-size:30px"-->
+What tools do we need to get started with unit testing in React?
+
+So now we know that unit tests are, used to start writing the first test. Let's see at the tools that will 
+
+use to write automated tests.
+
+To start writing unit tests in React, you only need the below two types of tools.
+
+* Test runner
+
+* Testing utilities
+
+<!--style="font-size:30px"-->
+Testing a component involving state
+
+Note that there are two sets of testing where we can testour class component.
+
+* Behavioral.
+
+We can simulate a click on the button and see the button's text has changed. We are seeing the 
+
+behavior of user and testing the expected change.
+
+* Component-based.
+
+ It tests the toggle method of the component and looks if it does then what we expect it to 
+
+do. Itis helpful when the toggle function is more complicated, and wants to test different scenarios of unit 
+
+testing.
+
+The combination of two gives us higher confidence.
+
+
+<!--style="font-size:30px"-->
+Prerequisites for React unit testing
+
+We use two viral libraries named Jest and Enzyme to do the unit testing. Jest is a very popular librarywhich 
+
+is written by Facebook and itbecamepopular in the sometimes (You could use other libraries such as mocha or 
+
+chai in place of Jest).
+
+Jest helps us do all the assertions, and Enzyme helps usrender React components in testing mode. We will see 
+
+both in detail below.
+
+Let's take a look at the widely used tools for testing React apps:
+
+
+<!--style="font-size:30px"-->
+Jest
+
+In React, the most often used test runner is Jest. We can run Jest in watch mode, which can run our tests 
+
+every time we save the file.
+
+Jest is a test runner that runs all our test suites and test cases. Jest is previously introduced in testing 
+
+JavaScript and React applications. We have to call Jest from the command line to run the test cases. We can 
+
+have additional configurations for Jest custom setup.
+
+
+<!--style="font-size:30px"-->
+Installation
+
+```markdown
+npm install --save-dev Jest  
+```
+
+Jest provides the configuration file to mention the additional configurations. We provide the file path in 
+
+the package, and the JSON file is below:
+
+```markdown
+--config <path/to/file.js/mjs/cjs/json>  
+```
+
+Let us create a jest.config.json file in the root folder and sum the script in the package.json file to run 
+
+our tests:
+
+```markdown
+{  
+ ...  
+  "scripts": {  
+   "test": "jest",  
+   }  
+  ...  
+} 
+```
+
+
+Let us create a jest.config.json file in the root folder and sum the script in the package.json file to run 
+
+our tests:
+
+<!--style="font-size:30px"-->
+Enzyme
+
+The Enzyme came into the field in December 2015. It is an addition to react, simplifying the output testing 
+
+in React components.
+
+The Enzyme is a library used with the Jest in so many test libraries, and it is used to render components and 
+
+traverse the DOM.
+
+If we build a React app, Jest and Enzyme are the best combinations for testing React apps.
+
+Jest is a test runner which is mainly used to execute the test cases with assertions. And, at the same, 
+
+Enzyme is a library that is used with Jest library, that provides the rendering techniques like (shallow, 
+
+mount, etc.) for React components and traverses the rendered output of the DOM.
+
+<!--style="font-size:30px"-->
+Let's look at the enzyme setup:
+
+<!--style="font-size:20px"-->
+Installation
+
+```markdown
+npm install --save-dev Enzyme 
+``` 
+
+Enzymes provide the adapters to work with many versions of React.So, install the adapter in theReact. Next, 
+
+we are installing React16below.
+
+```markdown
+npm install --save-dev enzyme-adapter-react-16  
+```
+
+Now, youhave to configure the Enzyme in the adapterto install in prank test environment.
+
+Let's create jest.setup.js and add the below code at the file:
+
+```markdown
+import React from 'react';  
+import { configure } from 'enzyme';  
+import Adapter from 'enzyme-adapter-react-16';  
+configure({ adapter: new Adapter() });  
+Now,you have to add the setup path to jest.config.json file:  
+{  
+ "setupFilesAfterEnv": [  
+   "<rootDir>/jest.setup.js"  
+ ]  
+}  
+```
+
+You have to installed an enzyme in your environment.
+
+It is essential to decide what is required for the test and what should be left out of it.
+
+So that, considering the next person after you to manage those test cases, there aren't a lot of unnecessary 
+
+test and snapshot files left behind.
+
+For each component for unit testing, start with small and stateless components and then move on to rigid 
+
+components. So that if any complex reacts component includes another minor component already tested, that 
+
+will make the process easier.
+
+However, in thetest-driven development (TDD) process, you should first decide and write test cases that 
+
+initially fail and eventually develop the functionality of the test cases that will pass.
+
+<!--style="font-size:30px"-->
+Consider a small example to understand:
+
+1. 
+
+```markdown
+import React from 'react';  
+const DisplayName = ({name}) => {  
+ return (  
+   <div>  
+     Welcome {name}!  
+   </div>  
+ );  
+};  
+export default DisplayName;  
+```
+
+2. 
+
+```markdown
+import React, { useState } from 'react';  
+import DisplayName from './displayName';  
+export const validateName = (name) => {  
+ if((name && isNaN(name)) || !name)  
+   return false  
+ return true  
+}  
+const User = () => {  
+ const [name,setName] = useState(null);  
+ const [error,setError] = useState(false);  
+  const setUserName = (event) =>{  
+   const {value} = event.target;  
+   var isOk = validateName(value);  
+   setError(isOk);  
+   setName(value);  
+ }  
+ return (  
+   <div>  
+    <DisplayName name={name} />  
+    <input type="text" value={name} onChange={setUserName}/>  
+     {error &&<div>Error</div>}  
+ </div>  
+ );  
+};  
+export default User; 
+```
+
+A Display Name component that receives a Name property as props and renders it.
+
+The User component in the text input as the Name property validates the username for setting the error if an 
+
+error is found.
+
+We have exported two components and the validation function use in our further tests.
+
+<!--style="font-size:30px"-->
+Unit testing the above example:
+
+There aretwo main approaches to test the React components:
+
+* Snapshot testing
+
+* Logical/functional testing
+
+
+<!--style="font-size:30px"-->
+1. Snapshot Testing
+
+Snapshot Test generates a snapshot of the component in the current state and stores it in a folder named 
+
+"__snapshots__."when you run the test.
+
+So, next time we change the component or modify it to rerun the test;
+
+A new snapshot is taken If it fails, which is clearly shows the difference between snapshots provided by the 
+
+output of the component. If a test fails, we can either accept or reject the change and modify the component 
+
+accordingly.
+
+<!--style="font-size:30px"-->
+How is Snapshot Testing done?
+
+Previously, we need to install the react-test-rendererutility to render the component atthe test.
+
+```markdown
+npm install --save-dev react-test-renderer  
+```
+
+Let's implement first snapshot by writing the below test case in file named UserName.spec.js:
+
+```markdown
+import React from 'react';  
+import renderer from 'react-test-renderer';  
+import DisplayName from './displayName';  
+describe('DisplayName', () => {  
+ test('should render Vrushali', () => {  
+   const component = renderer.create(<DisplayName name={"Vrushali"} />);  
+   let tree = component.toJSON();  
+   expect(tree).toMatchSnapshot();  
+ });  
+});  
+```
+
+
+Previously, we rendered the component displayName,converted it to JSON, and checked if it matched the 
+
+previous snapshot. Let's run the test by the "npm run test" command on cmd and see.
+
+For the first time, if you run the test, it generates a snapshot of the components' output and store it in 
+
+a"__snapshots__" folder. Wesee what kind of structure it stores.
+
+Now, Replace Display Name component and run the test again:
+
+```markdown
+import React from 'react';  
+const DisplayName = ({name}) => {  
+ return (  
+   <div>  
+     <p>Welcome {name}!</p>  
+   </div>  
+ );  
+};  
+export default DisplayName;
+```  
+
+![image](images/unit-testing-in-react2.png)
+
+We can see that it shows the changes in the component, and the test fails because it cannot match the last 
+
+snapshot.
+
+Here is an implementation changeto fix it.You need to update the snapshot it represents a bug is found in the 
+
+component to fix it. We can update the snapshot by using the "-u" option.
+
+Similarly, we add a snapshot test for the parent component.
+
+
+<!--style="font-size:30px"-->
+2. Logical/Functional Testing
+
+We can add some test cases and more tests in our code for testing the validation function.
+
+```markdown
+import React from 'react';  
+import renderer from 'react-test-renderer';  
+import DisplayName from './displayName';  
+import { validateName }  from './index';  
+describe('DisplayName', () => {  
+ test('should render Vrushali', () => {  
+   const component = renderer.create(<DisplayName name={"Vrushali"} />);  
+   let tree = component.toJSON();  
+   expect(tree).toMatchSnapshot();  
+ });  
+});  
+describe('Validation',()=>{  
+ test('can set the error if input is number',()=>{  
+   const name = 123;  
+   const error = validateName(name);  
+   expect(error).toBeTruthy();  
+ });  
+ test('Could reset  error if input is empty',()=>{  
+   const name = null;  
+   const error = validateName(name);  
+   expect(error).toEqual(false);  
+ });  
+})  
+```
+
+<!--style="font-size:20px"-->
+We have added two test cases here:
+
+* It checks if any error message will send if the user passes any number of inputsofthe name.
+
+* It checks the error message if it reactswith false where input box is empty at the name property.
+
+So,it covers the possible outcomes where the application has crashed in logic that we have forgotten to 
+
+handle at the development time.
+
+Now, we can see the below-given output if we run the tests.
+
+![image](images/unit-testing-in-react3.png)
+
+If the validation fails, the running tests will inform you; all tests will pass. Keeping the logic separate 
+
+helps a lot in complex code to be tested in possible cases and seems like cleaner way to understand the code.
+
+
+<!--style="font-size:30px"-->
+Reaction test library
+
+Unlike Enzyme, react-testing-library focuses on the user behavior rather than the implementation.
+
+The focus is on checking for correct output for a set of props, by using the react test library which is 
+
+writing end-to-end tests for the components in Enzyme:
+
+```markdown
+render(<Login />)  
+  
+  // fill the form  
+  fireEvent.change(screen.getByLabelText(/username/i), {  
+    target: {value: 'chuck'},  
+})  
+  fireEvent.change(screen.getByLabelText(/password/i), {  
+    target: {value: 'norris'},  
+  })  
+  
+  fireEvent.click(screen.getByText(/submit/i))  
+  
+  const alert = await screen.findByRole('alert')  
+  
+  expect(alert).toHaveTextContent(/congrats/i)  
+  expect(window.localStorage.getItem('token')).toEqual(fakeUserResponse.token)  
+}); 
+``` 
+
+If you're not sure what you have to test,test what you expect the component to render.
+
+Test all the different states of this component(s). If you expect different things to be rendered based on 
+
+the props passed in, render the external component with different props and make the appropriate assertions.
+
+For example, when you click or hover a button test, you have something to happen.
+
+If you are providing a custom button component and pass a color prop with a value of red, then you can test 
+
+it, and it give you the confidence that the component meets the design requirements.
+
+<!--style="font-size:30px"-->
+Conclusion
+
+It is very important to write unit tests, which is the simplest type of tests, and project to increase 
+
+confidence and the code correctness. We have to aim for a higher percentage of code coverage to make it the 
+
+part of workflow to write the unit test cases.
+
+
+# Reference Notes Link:
+
+
+* https://www.javatpoint.com/reactjs-tutorial
+
+* https://www.w3schools.com/REACT/DEFAULT.ASP
+
+* https://www.tutorialspoint.com/reactjs/index.htm
+
+* https://www.geeksforgeeks.org/reactjs-tutorials/
+
+<!--style="font-size:30px"-->
+Video Reference
+
+* https://www.youtube.com/watch?v=tiLWCNFzThE&list=PLwGdqUZWnOp3aROg4wypcRhZqJG3ajZWJ
+
+
+
 
