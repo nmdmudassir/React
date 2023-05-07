@@ -21,7 +21,8 @@ It is also known as ReactJs and React.js , so don't get confused if you read dif
 
 React knows only one thing that is to create an awesome UI.
 
-### Why React?
+<!--style="font-size:30px"-->
+* Why React?
 
 Created and Maintained By facebook.
 
@@ -77,7 +78,8 @@ Covers only the view layer of the app, hence you still need to choose other tech
 
 Uses inline templating and JSX, which might seem awkward to some developers.
 
-### Prerequisites for React?
+<!--style="font-size:30px"-->
+* Prerequisites for React?
 
 1: Basic Knowledge of Html , css and Javascript.
 
@@ -152,6 +154,52 @@ This will open up the react application in a new tab of our browser with the bel
 
 <br>
 
+
+# React File and Folder Structure
+
+In React application, there are several files and folders in the root directory. Some of them are as follows:
+
+1. node_modules: It contains the React library and any other third party libraries needed.
+
+2. public: It holds the public assets of the application. It contains the index.html where React will mount 
+
+the application by default on the` <div id="root"></div>` element.
+
+3. src: It contains the App.css, App.js, App.test.js, index.css, index.js, and serviceWorker.js files. Here, 
+
+the App.js file always responsible for displaying the output screen in React.
+
+4. package-lock.json: It is generated automatically for any operations where npm package modifies either the 
+
+node_modules tree or package.json. It cannot be published. It will be ignored if it finds any other place 
+
+rather than the top-level package.
+
+5. package.json: It holds various metadata required for the project. It gives information to npm, which 
+
+allows to identify the project as well as handle the project?s dependencies.
+
+6. README.md: It provides the documentation to read about React topics.
+
+# React Environment Setup
+
+Now, open the src >> App.js file and make changes which you want to display on the screen. After making 
+
+desired changes, save the file. As soon as we save the file, Webpack recompiles the code, and the page will 
+
+refresh automatically, and changes are reflected on the browser screen. Now, we can create as many components 
+
+as we want, import the newly created component inside the App.js file and that file will be included in our 
+
+main index.html file after compiling by Webpack.
+
+Next, if we want to make the project for the production mode, type the following command. This command will 
+
+generate the production build, which is best optimized.
+
+---> $ npm build  
+
+
 # React ES6
 
 What is ES6?
@@ -203,6 +251,8 @@ document.write(mycar.brand);
 </html>
 ```
 
+![image](images/Es6classes1.png)
+
 Note: The constructor function is called automatically when the object is initialized.
 
 <!--style="font-size:30px;color:blue;"-->
@@ -239,6 +289,13 @@ document.write(mycar.present());
 </body>
 </html>
 ```
+<!--style="font-size:30px"-->
+Output 
+
+```markdown
+I have a Ford
+```
+
 
 As you can see in the example above, you call the method by referring to the object's method name followed by parentheses (parameters would go inside the parentheses).
 
@@ -288,6 +345,19 @@ document.write(mycar.show());
 </body>
 </html>
 ```
+
+<!--style="font-size:30px"-->
+Output 
+
+```console
+I have a Ford, it is a Mustang
+```
+
+The super() method refers to the parent class.
+
+By calling the super() method in the constructor method, we call the parent's constructor method and get 
+
+access to the parent's properties and methods.
 
 ### ES6 Arrow Functions
 
@@ -345,6 +415,7 @@ global scope.
 
 flexible and expressive.
 
+<!--style="font-size:30px"-->
 Example 
 
 Before:
@@ -374,6 +445,9 @@ document.getElementById("demo").innerHTML = hello();
 </html>
 ```
 
+![image](images/withoutarrow.png)
+
+<!--style="font-size:30px"-->
 Example 
 
 With Arrow Function:
@@ -403,6 +477,10 @@ document.getElementById("demo").innerHTML = hello();
 </html>
 ```
 
+![image](images/arrowfunction.png)
+
+
+<!--style="font-size:30px"-->
 Example 
 
 Arrow Function With Parameters:
@@ -429,6 +507,8 @@ document.getElementById("demo").innerHTML = hello("World");
 </body>
 </html>
 ```
+
+![image](images/arrowp.png)
 
 ### ES6 Variable
 
@@ -520,6 +600,12 @@ ReactDOM.render(myList, document.getElementById('root'));
 
 ```
 
+<!--style="font-size:30px"-->
+Output
+
+![image](images/arraymethod.png)
+
+
 ### ES6 Destructuring
 
 To illustrate destructuring, we'll make a sandwich. Do you take everything out of the refrigerator to make your sandwich? No, you only take out the items you would like to use on your sandwich.
@@ -603,6 +689,14 @@ function myVehicle({type, color, brand, model}) {
 }
 ```
 
+<!--style="font-size:30px"-->
+Output
+
+```markdown
+My car is a red Ford Mustang.
+```
+
+
 ### ES6 Spread Operator
 
 ES6 introduced a new operator referred to as a spread operator, which consists of three dots (...). It allows an iterable to expand in places where more than zero arguments are expected. It gives us the privilege to obtain the parameters from an array.
@@ -640,6 +734,8 @@ document.write(numbersCombined);
 </html>
 ```
 
+![image](images/spreadopera1.png)
+
 The spread operator is often used in combination with destructuring.
 
 Example:
@@ -665,6 +761,9 @@ document.write("<p>" + rest + "</p>");
 </body>
 </html>
 ```
+
+![image](images/spreadopera2.png)
+
 
 ---> We can use the spread operator with objects too:
 
@@ -702,6 +801,8 @@ console.log(myUpdatedVehicle);
 </body>
 </html>
 ```
+
+![image](images/spreadopera3.png)
 
 Notice the properties that did not match were combined, but the property that did match, color, was overwritten by the last object that was passed, updateMyVehicle.
 
@@ -815,7 +916,14 @@ console.log(num(10, 20, 30));
 
 The ternary operator is a simplified conditional operator like if / else.
 
-Syntax: condition ? <expression if true> : <expression if false>
+<!--style="font-size:30px"-->
+Syntax:
+
+
+```htm
+condition ? <expression if true> : <expression if false>
+```
+ 
 
 Here is an example using if / else:
 
@@ -855,7 +963,11 @@ if (authenticated) {
 </html>
 ```
 
----> Example with Ternary Operator:
+![image](images/ternary1.png)
+
+
+<!--style="font-size:30px"-->
+Example with Ternary Operator:
 
 ```markdown
 <!DOCTYPE html>
@@ -884,6 +996,50 @@ authenticated ? renderApp() : renderLogin();
 </body>
 </html>
 ```
+
+![image](images/ternary2.png)
+
+<!--style="font-size:30px"-->
+Example Of Rendering Condition (Using Ternary Operator on React)
+
+Condition.js
+
+```markdown
+import{useState} from 'react'
+
+function Condition(){
+
+    const [loggedIn , setLoggedIn] = useState(false)
+    const [logIn , setLogIn] = useState(3)
+
+    return(
+        <div>
+          {loggedIn?<h1>Welcome Anil</h1>:<h1>Welcome Guest</h1>}
+          {logIn==1?<h1>welcome user 1</h1>:logIn==2?<h1>welcome user 2</h1>:<h1>welcome user 3</h1>}
+        </div>
+    )
+}
+export default Condition;
+```
+
+App.js
+
+```markdown
+import logo from './logo.svg';
+import './App.css';
+import Condition from './Condition'
+
+function App() {
+  return (
+    <div className="App">
+  <Condition />
+    </div>
+  );
+}
+
+export default App;
+```
+![image](images/ternary3.png)
 
 # React Render HTML
 
@@ -922,6 +1078,11 @@ import ReactDOM from 'react-dom/client';
 ReactDOM.render(<p>Hello</p>, document.getElementById('root'));
 ```
 
+<!--style="font-size:30px"-->
+Output
+
+![image](images/render1.png)
+
 Note that the element id does not have to be called "root", but this is the standard convention.
 
 <!--style="font-size:30px"-->
@@ -955,6 +1116,12 @@ const myelement = (
 
 ReactDOM.render(myelement, document.getElementById('root'));
 ```
+
+<!--style="font-size:30px"-->
+Output
+
+![image](images/render2.png)
+
 <!--style="font-size:30px"-->
 * The Root Node
 
@@ -980,6 +1147,11 @@ you must have a element with
 id="sandy" on your "index.html" page.
 */
 ```
+<!--style="font-size:30px"-->
+Output
+
+![image](images/render3.png)
+
 
 # React Jsx
 
@@ -1018,6 +1190,9 @@ const myElement = <h1>I Love JSX!</h1>;
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(myElement);
 ```
+
+![image](images/jsx1.png)
+
 <!--style="font-size:30px"-->
 Example 2
 
@@ -1033,6 +1208,8 @@ const myElement = React.createElement('h1', {}, 'I do not use JSX!');
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(myElement);
 ```
+
+![image](images/jsx2.png)
 
 As you can see in the first example, JSX allows us to write HTML directly within the JavaScript code.
 
@@ -1061,6 +1238,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(myElement);
 ```
 
+![image](images/jsx3.png)
+
 <!--style="font-size:30px"-->
 * Inserting a Large Block of HTML
 
@@ -1087,6 +1266,8 @@ const myElement = (
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(myElement);
 ```
+
+![image](images/jsx4.png)
 
 <!--style="font-size:30px"-->
 * One Top Level Element
@@ -1116,6 +1297,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(myElement);
 ```
 
+![image](images/jsx5.png)
+
 JSX will throw an error if the HTML is not correct, or if the HTML misses a parent element.
 
 <!--style="font-size:30px"-->
@@ -1138,6 +1321,8 @@ const myElement = <input type="text" />;
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(myElement);
 ```
+
+![image](images/jsx6.png)
 
 JSX will throw an error if the HTML is not properly closed.
 
@@ -1169,6 +1354,8 @@ const myElement = <h1 className="myclass">Hello World</h1>;
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(myElement);
 ```
+
+![image](images/jsx7.png)
 
 <!--style="font-size:30px"-->
 * Conditions - if statements
@@ -1205,6 +1392,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(myElement);
 ```
 
+![image](images/jsx8.png)
+
 -> Option 2:
 
 Use ternary expressions instead:
@@ -1226,6 +1415,8 @@ const myElement = <h1>{(x) < 10 ? "Hello" : "Goodbye"}</h1>;
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(myElement);
 ```
+
+![image](images/jsx9.png)
 
 Note that in order to embed a JavaScript expression inside JSX, the JavaScript must be wrapped with curly 
 
@@ -1400,6 +1591,8 @@ class App extends React.Component {
 export default App;  
 ```
 
+![image](images/state1.png)
+
 To set the state, it is required to call the super() method in the constructor. It is because this.state is 
 
 uninitialized before the super() method has been called.
@@ -1450,6 +1643,10 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(myElement);
 ```
+<!--style="font-size:30px"-->
+Output
+
+![image](images/props1.png)
 
 The component receives the argument as a props object:
 
@@ -1483,6 +1680,10 @@ function Garage() {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Garage />);
 ```
+<!--style="font-size:30px"-->
+Output
+
+![image](images/props2.png)
 
 Note : React Props are read-only! You will get an error if you try to change their value.
 
@@ -1523,6 +1724,11 @@ function Football() {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Football />);
 ```
+
+<!--style="font-sizeL30px"-->
+Output
+
+![image](images/event1.png)
 
 # React List
 
@@ -1697,6 +1903,12 @@ function Garage() {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Garage />);
 ```
+<!--style="font-size:30px"-->
+Output
+
+![image](images/keys1.png)
+
+
 # React Fragments
 
 In React, whenever you want to render something on the screen, you need to use a render method inside the 
@@ -1727,6 +1939,10 @@ class App extends React.Component {
      }   
 } 
 ``` 
+<!--style="font-size:30px"-->
+Output
+
+![image](images/fragment1.png)
 
 To solve this problem, React introduced Fragments from the 16.2 and above version. Fragments allow you to 
 
@@ -1761,6 +1977,12 @@ class App extends React.Component {
     }   
 } 
 ```  
+
+<!--style="font-size:30px"-->
+Output
+
+![image](images/fragment2.png)
+
 
 <!--style="font-size:30px"-->
 * Why we use Fragments?
@@ -2025,11 +2247,11 @@ Sometimes, we want to need multiple links on a single page. When we click on any
 
 should load that page which is associated with that path without reloading the web page. To do this, we need 
 
-to import <Link> component in the index.js file.
+to import <`Link>` component in the index.js file.
 
 
 <!--style="font-size:30px"-->
-What is < Link> component?
+What is `<Link>` component?
 
 This component is used to create links which allow to navigate on different URLs and render its content 
 
@@ -2073,7 +2295,7 @@ const routing = (
 )  
 ReactDOM.render(routing, document.getElementById('root'));  
 ```
-<!--style="font-size:30px-->
+<!--style="font-size:30px"-->
 Output
 
 ![image](images/react-router4.png)
@@ -2392,6 +2614,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<MyForm />);
 ```
 
+<!--style="font-size:30px"-->
+Output
+
+![image](images/form1.png)
+
 This will work as normal, the form will submit and the page will refresh.
 
 But this is generally not what we want to happen in React.
@@ -2444,6 +2671,13 @@ function MyForm() {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<MyForm />);
 ```
+
+<!--style="font-size:30px"-->
+Output
+
+![image](images/form2.png)
+
+
 <!--style="font-size:30px"-->
 * Submitting Forms
 
@@ -2481,6 +2715,11 @@ function MyForm() {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<MyForm />);
 ```
+
+<!--style="font-size:30px"-->
+Output
+
+![image](images/form3.png)
 
 <!--style="font-size:30px"-->
 * Multiple Input fields
@@ -2543,6 +2782,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<MyForm />);
 
 ```
+
+<!--style="font-size:30px"-->
+Output
+
+![image](images/form4.png)
 
 Note: We use the same event handler function for both input fields, we could write one event handler for 
 
@@ -4006,6 +4250,13 @@ return (
 export default App
 ```
 
+<!--style="font-size:30px"-->
+Output
+
+![image](images/usestate.png)
+
+* when we click button it will prints the random number
+
 ## useEffect
 
 The Effect Hook allows us to perform side effects (an action) in the function components. It does not use 
@@ -4026,28 +4277,35 @@ Side effects have common features which the most web applications need to perfor
 Example:
 
 ```markdown
-import React, { useState, useEffect } from 'react';  
-  
-function CounterExample() {  
-  const [count, setCount] = useState(0);  
-  
-  // Similar to componentDidMount and componentDidUpdate:  
-  useEffect(() => {  
-    // Update the document title using the browser API  
-    document.title = `You clicked ${count} times`;  
-  });  
-  
-  return (  
-    <div>  
-      <p>You clicked {count} times</p>  
-      <button onClick={() => setCount(count + 1)}>  
-        Click me  
-      </button>  
-    </div>  
-  );  
-}  
-export default CounterExample;  
+import { useState, useEffect } from "react";
+import ReactDOM from "react-dom/client";
+
+function Counter() {
+  const [count, setCount] = useState(0);
+  const [calculation, setCalculation] = useState(0);
+
+  useEffect(() => {
+    setCalculation(() => count * 2);
+  }, [count]); // <- add the count variable here
+
+  return (
+    <>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount((c) => c + 1)}>+</button>
+      <p>Calculation: {calculation}</p>
+    </>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Counter />);
 ```
+
+<!--style="font-size:30px"-->
+Output
+
+![image](images/useeffect1.png)
+
 
 * In React component, there are two types of side effects:
 
@@ -4076,6 +4334,38 @@ performs the cleanup of memory when the component unmounts. However, as we know 
 render method and not just once. Therefore, React also cleans up effects from the previous render before 
 
 running the effects next time.
+
+
+Example
+
+```markdown
+import { useState, useEffect } from "react";
+import ReactDOM from "react-dom/client";
+
+function Timer() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let timer = setTimeout(() => {
+    setCount((count) => count + 1);
+  }, 1000);
+
+  return () => clearTimeout(timer)
+  }, []);
+
+  return <h1>I've rendered {count} times!</h1>;
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Timer />);
+```
+
+
+<!--style="font-size:30px"-->
+Output
+
+![image](images/useeffect2.png)
+
 
 ## useContext
 
@@ -4109,81 +4399,100 @@ its value changes but you can still optimize its performance by using memoizatio
 <!--style="font-size:20px"-->
 Example: 
 
-Program to demonstrate the use of useContext Hook. In this example, we have a button, whenever we click on 
+In this example, we are going to build an authentication React application that logs in or logs out users in 
 
-the button the onClick handler is getting triggered and it changes the authentication status(with a default 
+the children component and updates the state accordingly.
 
-value to Nopes) with the help of the useContext hook. Let’s see the output of the above code:
+We will build an App Component which has two LogIn and LogOut Components which access the state provided by 
 
-<!--style="font-size:20px"-->
-auth-context.js
+the Context Provider and updates it accordingly.
+
+
+AuthContext.js
 
 ```markdown
 import React from 'react';
- 
-// Creating the context object and passing the default values.
-const authContext = React.createContext({status:null,login:()=>{}});
- 
+
+const authContext = React.createContext({
+   auth: null,
+   login: () => {},
+   logout: () => {},
+});
 export default authContext;
 ```
 
-<!--style="font-size:20px"-->
-App.js
+
+App.js 
+
 
 ```markdown
-import React, { useState } from "react";
-import Auth from "./Auth";
-import AuthContext from "./auth-context";
+import React, { useState } from 'react';
+import LogIn from './Login';
+import LogOut from './Logout';
+import AuthContext from './AuthContext';
 
 const App = () => {
-//using the state to dynamicallly pass the values to the context
-
-const [authstatus, setauthstatus] = useState(false);
-const login = () => {
-	setauthstatus(true);
-};
-return (
-	<React.Fragment>
-	<AuthContext.Provider value={{ status: authstatus, login: login }}>
-		<Auth />
-	</AuthContext.Provider>
-	</React.Fragment>
-);
+   const [auth, setAuth] = useState(false);
+   const login = () => {
+      setAuth(true);
+   };
+   const logout = () => {
+      setAuth(false);
+   };
+   return (
+      <React.Fragment>
+      <AuthContext.Provider
+            value={{ auth: auth, login: login, logout: logout }}
+      >
+      <p>{auth ? 'Hi! You are Logged In' : 'Oope! Kindly Login'}</p>
+      <LogIn />
+      <LogOut />
+      </AuthContext.Provider>
+      </React.Fragment>
+   );
 };
 export default App;
 ```
 
-<!--style="font-size:20px"-->
-Auth.js
+
+Login.js
+
+```json
+import React, { useContext } from 'react';
+import AuthContext from './AuthContext';
+
+const Login = () => {
+   const auth = useContext(AuthContext);
+   return (
+      <>
+         <button onClick={auth.login}>Login</button>
+      </>
+   );
+};
+export default Login;
+```
+
+Logout.js
 
 ```markdown
-import React, { useContext } from "react";
-import AuthContext from "./auth-context";
+import React, { useContext } from 'react';
+import AuthContext from './AuthContext';
 
-const Auth = () => {
-// Now all the data stored in the context can
-// be accessed with the auth variable
-const auth = useContext(AuthContext);
-console.log(auth.status);
-return (
-	<div>
-	<h1>Are you authenticated?</h1>
-	{auth.status ?
-
-<p>Yes you are</p>
-
-:
-
-<p>Nopes</p>
-
-}
-
-	<button onClick={auth.login}>Click To Login</button>
-	</div>
-);
+const Logout = () => {
+   const auth = useContext(AuthContext);
+   return (
+      <>
+         <button onClick={auth.logout}>Click To Logout</button>
+      </>
+   );
 };
-export default Auth;
+export default Logout;
 ```
+
+<!--style="font-size:30px"-->
+Output
+
+![image](images/usecontext1.png)
 
 ## useRef
 
@@ -4234,6 +4543,10 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
 ```
+<!--style="font-size:30px"-->
+Output
+
+![image](images/useRef1.png)
 
 useRef() only returns one item. It returns an Object called current.
 
@@ -4281,6 +4594,11 @@ root.render(<App />);
 ```
 
 <!--style="font-size:30px"-->
+Output
+
+![image](images/useref2.png)
+
+<!--style="font-size:30px"-->
 Tracking State Changes
 
 The useRef Hook can also be used to keep track of previous state values.
@@ -4320,6 +4638,11 @@ function App() {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
 ```
+
+<!--style="font-size:30px"-->
+Output
+
+![image](images/useref3.png)
 
 This time we use a combination of useState, useEffect, and useRef to keep track of the previous state.
 
@@ -4418,6 +4741,12 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Todos />);
 ```
 
+<!--style="font-size:30px"-->
+Output
+
+![image](images/usereducer1.png)
+
+
 ## useCallback
 
 The useCallback hook is used when you have a component in which the child is rerendering again and again 
@@ -4442,7 +4771,7 @@ const memoizedCallback = useCallback(
 );
 ```
 
-<!--style="font-size:20px"-->
+<!--style="font-size:30px"-->
 Without useCallback Hook:
 
 The problem is that once the counter is updated, all three functions are recreated again. The alert increases 
@@ -4496,7 +4825,12 @@ return (
 export default App;
 ```
 
-<!--style=font-size:20px"-->
+<!--style="font-size:20px"-->
+Output
+
+![image](images/callback1.png)
+
+<!--style="font-size:30px"-->
 With useCallback hook: 
 
 To solve this problem we can use the useCallback hook. Here, the filename is App.js.
@@ -4554,6 +4888,7 @@ so the set size will increase by 2 and when we update the state ‘number’ the
 
 re-instantiated and the size of the set will increase by only one.
 
+![image](images/callback2.png)
 
 ## useMemo
 
@@ -4630,6 +4965,8 @@ export default App;
 <!--style="font-size:20px"-->
 Output: 
 
+![image](images/memo1.png)
+
 In the above example, we have an App component and this component is doing two things one is squaring a 
 
 number on the given input and incrementing the counter. We have two states here number and counter, whenever 
@@ -4688,6 +5025,8 @@ export default App;
 
 <!--style="font-size:20px"-->
 Output: 
+
+![image](images/memo2.png)
 
 Now in the above example, we have used the user memo hook, here the function that returns the value i.e 
 
@@ -4772,6 +5111,11 @@ const useForm = () => {
 
 export default useForm;
 ```
+
+<!--style="font-size:30px"-->
+Output
+
+![image](images/customhook1.png)
 
 In the above example, when the user types in the input field, then the custom hook is called which decides 
 
