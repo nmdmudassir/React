@@ -1687,6 +1687,256 @@ Output
 
 Note : React Props are read-only! You will get an error if you try to change their value.
 
+
+# React Props Validation
+
+* Props are an important mechanism for passing the read-only attributes to React components. The props are 
+
+usually required to use correctly in the component. If it is not used correctly, the components may not 
+
+behave as expected. Hence, it is required to use props validation in improving react components.
+
+* Props validation is a tool that will help the developers to avoid future bugs and problems. It is a useful 
+
+way to force the correct usage of your components. It makes your code more readable. React components used 
+
+special property PropTypes that help you to catch bugs by validating data types of values passed through 
+
+props, although it is not necessary to define components with propTypes. However, if you use propTypes with 
+
+your components, it helps you to avoid unexpected bugs.
+
+<!--style="font-size:30px"-->
+Validating Props
+
+App.propTypes is used for props validation in react component. When some of the props are passed with an 
+
+invalid type, you will get the warnings on JavaScript console. After specifying the validation patterns, you 
+
+will set the App.defaultProps.
+
+<!--style="font-size:30px"-->
+Syntax
+
+```markdown
+class App extends React.Component {  
+          render() {}  
+}  
+Component.propTypes = { /*Definition */}; 
+```
+
+<!--style="font-size:30px"-->
+* ReactJS Props Validator
+
+ReactJS props validator contains the following list of validators.
+
+![image](images/propvalid1.png)
+
+
+<!--style="font-size:30px"-->
+Example
+
+Here, we are creating an App component which contains all the props that we need. In this example, App.
+
+propTypes is used for props validation. For props validation, you must have to add this line: import 
+
+PropTypes from 'prop-types' in App.js file.
+
+App.js
+
+```markdown
+import React, { Component } from 'react';  
+import PropTypes from 'prop-types';  
+class App extends React.Component {  
+   render() {  
+      return (  
+          <div>  
+              <h1>ReactJS Props validation example</h1>  
+              <table>  
+                  <tr>  
+                      <th>Type</th>  
+                      <th>Value</th>  
+                      <th>Valid</th>  
+                  </tr>  
+                <tr>  
+                      <td>Array</td>  
+                      <td>{this.props.propArray}</td>  
+                      <td>{this.props.propArray ? "true" : "False"}</td>  
+                  </tr>  
+                  <tr>  
+                      <td>Boolean</td>  
+                      <td>{this.props.propBool ? "true" : "False"}</td>  
+                      <td>{this.props.propBool ? "true" : "False"}</td>  
+                  </tr>  
+                  <tr>  
+                      <td>Function</td>  
+                      <td>{this.props.propFunc(5)}</td>  
+                      <td>{this.props.propFunc(5) ? "true" : "False"}</td>  
+                  </tr>  
+                  <tr>  
+                      <td>String</td>  
+                      <td>{this.props.propString}</td>  
+                      <td>{this.props.propString ? "true" : "False"}</td>  
+                  </tr>  
+                  <tr>  
+                      <td>Number</td>  
+                      <td>{this.props.propNumber}</td>  
+                      <td>{this.props.propNumber ? "true" : "False"}</td>  
+                  </tr>  
+             </table>  
+        </div>  
+        );  
+   }  
+}  
+App.propTypes = {  
+    propArray: PropTypes.array.isRequired,  
+    propBool: PropTypes.bool.isRequired,  
+    propFunc: PropTypes.func,  
+    propNumber: PropTypes.number,  
+    propString: PropTypes.string,   
+}  
+App.defaultProps = {  
+    propArray: [1,2,3,4,5],  
+    propBool: true,  
+    propFunc: function(x){return x+5},  
+    propNumber: 1,  
+    propString: "JavaTpoint",  
+}  
+export default App;  
+```
+
+Main.js
+
+```markdown
+import React from 'react';  
+import ReactDOM from 'react-dom';  
+import App from './App.js';  
+  
+ReactDOM.render(<App/>, document.getElementById('app'));  
+```
+
+<!--style="font-size:20px"-->
+Output
+
+![image](images/reactjs-props-validation.png)
+
+
+<!--style="font-size:30px"-->
+ReactJS Custom Validators
+
+ReactJS allows creating a custom validation function to perform custom validation. The following argument is 
+
+used to create a custom validation function.
+
+* props: It should be the first argument in the component.
+* propName: It is the propName that is going to validate.
+* componentName: It is the componentName that are going to validated again.
+
+Example
+
+```markdown
+var Component = React.createClass({  
+App.propTypes = {  
+   customProp: function(props, propName, componentName) {  
+        if (!item.isValid(props[propName])) {  
+          return new Error('Validation failed!');  
+        }  
+      }  
+   }  
+})  
+```
+
+# React Constructor
+
+The constructor is a method used to initialize an object's state in a class. It automatically called during 
+
+the creation of an object in a class.
+
+The concept of a constructor is the same in React. The constructor in a React component is called before the 
+
+component is mounted. When you implement the constructor for a React component, you need to call super(props) 
+
+method before any other statement. If you do not call super(props) method, this.props will be undefined in 
+
+the constructor and can lead to bugs.
+
+
+<!--style="font-size:20px"-->
+Syntax:
+
+```markdown
+Constructor(props){  
+     super(props);  
+}  
+```
+
+In React, constructors are mainly used for two purposes:
+
+1. It used for initializing the local state of the component by assigning an object to this.state.
+
+2. It used for binding event handler methods that occur in your component.
+
+* Note: If you neither initialize state nor bind methods for your React component, there is no need to 
+
+implement a constructor for React component.
+
+
+You cannot call setState() method directly in the constructor(). If the component needs to use local state, 
+
+you need directly to use 'this.state' to assign the initial state in the constructor. The constructor only 
+
+uses this.state to assign initial state, and all other methods need to use set.state() method.
+
+Example
+
+The concept of the constructor can understand from the below example.
+
+App.js
+
+```markdown
+import React, { Component } from 'react';  
+  
+class App extends Component {  
+  constructor(props){  
+    super(props);  
+    this.state = {  
+         data: 'www.javatpoint.com'  
+      }  
+    this.handleEvent = this.handleEvent.bind(this);  
+  }  
+  handleEvent(){  
+    console.log(this.props);  
+  }  
+  render() {  
+    return (  
+      <div className="App">  
+    <h2>React Constructor Example</h2>  
+    <input type ="text" value={this.state.data} />  
+        <button onClick={this.handleEvent}>Please Click</button>  
+      </div>  
+    );  
+  }  
+}  
+export default App;  
+```
+
+Main.js
+
+```markdown
+import React from 'react';  
+import ReactDOM from 'react-dom';  
+import App from './App.js';  
+  
+ReactDOM.render(<App />, document.getElementById('app'));  
+```
+
+<!--style="font-size:20px"-->
+Output
+
+When you execute the above code, you get the following output.
+
+![image](images/react-constructor-output.png)
+
 # React Events
 
 Just like HTML DOM events, React can perform actions based on user events.
@@ -4039,6 +4289,171 @@ import React, { lazy } from 'react';
 const MyFirstComponent = lazy(() => import("./MyFirstComponent.js"));  
 ```
 
+# React Context API
+
+The React Context API is a component structure, which allows us to share data across all levels of the 
+
+application. The main aim of Context API is to solve the problem of prop drilling (also called "Threading"). 
+
+The Context API in React are given below.
+
+* React.createContext
+
+* Context.provider
+
+* Context.Consumer
+
+* Class.contextType
+
+<!--style="font-size:30px"-->
+React.createContext
+
+It creates a context object. When React renders a component which subscribes to this context object, then it 
+
+will read the current context value from the matching provider in the component tree.
+
+<!--style="font-size:20px"-->
+Syntax
+
+```markdown
+const MyContext = React.createContext(defaultValue);  
+```
+
+When a component does not have a matching Provider in the component tree, it returns the defaultValue 
+
+argument. It is very helpful for testing components isolation (separately) without wrapping them.
+
+
+<!--style="font-size:30px"-->
+Context.Provider
+
+Every Context object has a Provider React component which allows consuming components to subscribe to context 
+
+changes. It acts as a delivery service. When a consumer component asks for something, it finds it in the 
+
+context and provides it to where it is needed.
+
+<!--style="font-size:20px"-->
+Syntax
+
+```markdown
+<MyContext.Provider value={/* some value */}>  
+```
+
+It accepts the value prop and passes to consuming components which are descendants of this Provider. We can 
+
+connect one Provider with many consumers. Context Providers can be nested to override values deeper within 
+
+the component tree. All consumers that are descendants of a Provider always re-render whenever the Provider's 
+
+value prop is changed. The changes are determined by comparing the old and new values using the same 
+
+algorithm as Object.is algorithm.
+
+<!--style="font-size:30px"-->
+Context.Consumer
+
+It is the React component which subscribes to the context changes. It allows us to subscribe to the context 
+
+within the function component. It requires the function as a component. A consumer is used to request data 
+
+through the provider and manipulate the central data store when the provider allows it.
+
+<!--style="font-size:20px"-->
+Syntax
+
+```markdown
+<MyContext.Consumer>  
+       {value => /* render something which is based on the context value */}  
+</MyContext.Consumer> 
+``` 
+
+
+The function component receives the current context value and then returns a React node. The value argument 
+
+which passed to the function will be equal to the value prop of the closest Provider for this context in the 
+
+component tree. If there is no Provider for this context, the value argument will be equal to the 
+
+defaultValue which was passed to createContext().
+
+<!--style="font-size:30px"-->
+Class.contextType
+
+The contextType property on a class used to assign a Context object which is created by React.createContext
+
+(). It allows you to consume the closest current value of that Context type using this.context. We can 
+
+reference this in any of the component life-cycle methods, including the render function.
+
+Note: We can only subscribe to a single context using this API. If we want to use the experimental public 
+
+class field's syntax, we can use a static class field to initialize the contextType.
+
+<!--style="font-size:20px"-->
+React Context API Example
+
+Step1 Create a new React app using the following command.
+
+---> $ npx create-react-app mycontextapi  
+
+Step2 Install bootstrap CSS framework using the following command.
+
+---> $ npm install react-bootstrap bootstrap --save    
+
+Step3 Add the following code snippet in the src/APP.js file.
+
+
+```markdown
+import React, { Component } from 'react';  
+import 'bootstrap/dist/css/bootstrap.min.css';  
+  
+const BtnColorContext = React.createContext('btn btn-darkyellow');  
+  
+class App extends Component {  
+  render() {  
+    return (  
+      <BtnColorContext.Provider value="btn btn-info">  
+        <Button />  
+      </BtnColorContext.Provider>  
+    );  
+  }  
+}  
+  
+function Button(props) {  
+  return (  
+  <div className="container">  
+    <ThemedButton />      
+  </div>  
+  );  
+}  
+  
+class ThemedButton extends Component {  
+    
+  static contextType = BtnColorContext;  
+  render() {  
+    return <button className={this.context} >  
+      welcome to javatpoint  
+    </button>;  
+  }  
+}  
+export default App;  
+```
+
+In the above code snippet, we have created the context using React.createContext(), which returns the Context 
+
+object. After that, we have created the wrapper component which returns the Provider component, and then add 
+
+all the elements as children from which we want to access the context.
+
+<!--style="font-size:20px"-->
+Output
+
+When we run the React app, we will get the following screen.
+
+![image](images/react-context-api-output.png)
+
+
 # React Hooks
 
 React Hooks open up a completely new approach to constructing functional components, enabling us to include 
@@ -5121,6 +5536,172 @@ In the above example, when the user types in the input field, then the custom ho
 
 whether the text is valid or not based on certain conditions.
 
+
+# React Flux 
+
+Flux is an application architecture that Facebook uses internally for building the client-side web 
+
+application with React. It is not a library nor a framework. It is neither a library nor a framework. It is a 
+
+kind of architecture that complements React as view and follows the concept of Unidirectional Data Flow 
+
+model. It is useful when the project has dynamic data, and we need to keep the data updated in an effective 
+
+manner. It reduces the runtime errors.
+
+Flux applications have three major roles in dealing with data:
+
+1. Dispatcher
+
+2. Stores
+
+3. Views (React components)
+
+Here, you should not be confused with the Model-View-Controller (MVC) model. Although, Controllers exists in 
+
+both, but Flux controller-views (views) found at the top of the hierarchy. It retrieves data from the stores 
+
+and then passes this data down to their children. Additionally, action creators - dispatcher helper methods 
+
+used to describe all changes that are possible in the application. It can be useful as a fourth part of the 
+
+Flux update cycle.
+
+<!--style="font-size:30px"-->
+Structure and Data Flow
+
+![image](images/react-flux-concept.png)
+
+In Flux application, data flows in a single direction(unidirectional). This data flow is central to the flux 
+
+pattern. The dispatcher, stores, and views are independent nodes with inputs and outputs. The actions are 
+
+simple objects that contain new data and type property. Now, let us look at the various components of flux 
+
+architecture one by one.
+
+<!--style="font-size:30px"-->
+Dispatcher
+
+It is a central hub for the React Flux application and manages all data flow of your Flux application. It is 
+
+a registry of callbacks into the stores. It has no real intelligence of its own, and simply acts as a 
+
+mechanism for distributing the actions to the stores. All stores register itself and provide a callback. It 
+
+is a place which handled all events that modify the store. When an action creator provides a new action to 
+
+the dispatcher, all stores receive that action via the callbacks in the registry.
+
+The dispatcher's API has five methods. These are:
+
+![image](images/dispatcher.png)
+
+<!--style="font-size:30px"-->
+Stores
+
+It primarily contains the application state and logic. It is similar to the model in a traditional MVC. It is 
+
+used for maintaining a particular state within the application, updates themselves in response to an action, 
+
+and emit the change event to alert the controller view.
+
+<!--style="font-size:30px"-->
+Views
+
+It is also called as controller-views. It is located at the top of the chain to store the logic to generate 
+
+actions and receive new data from the store. It is a React component listen to change events and receives the 
+
+data from the stores and re-render the application.
+
+<!--style="font-size:30px"-->
+Actions
+
+The dispatcher method allows us to trigger a dispatch to the store and include a payload of data, which we 
+
+call an action. It is an action creator or helper methods that pass the data to the dispatcher.
+
+<!--style="font-size:30px"-->
+Advantage of Flux
+
+* It is a unidirectional data flow model which is easy to understand.
+
+* It is open source and more of a design pattern than a formal framework like MVC architecture.
+
+* The flux application is easier to maintain.
+
+* The flux application parts are decoupled.
+
+# React Redux
+
+* Redux is an open-source JavaScript library used to manage application state. React uses Redux for building 
+
+the user interface. It was first introduced by Dan Abramov and Andrew Clark in 2015.
+
+* React Redux is the official React binding for Redux. It allows React components to read data from a Redux 
+
+Store, and dispatch Actions to the Store to update data. Redux helps apps to scale by providing a sensible 
+
+way to manage state through a unidirectional data flow model. React Redux is conceptually simple. It 
+
+subscribes to the Redux store, checks to see if the data which your component wants have changed, and 
+
+re-renders your component.
+
+Redux was inspired by Flux. Redux studied the Flux architecture and omitted unnecessary complexity.
+
+* Redux does not have Dispatcher concept.
+
+* Redux has an only Store whereas Flux has many Stores.
+
+* The Action objects will be received and handled directly by Store.
+
+<!--style="font-size:30px"-->
+Why Use React Redux?
+
+The main reason to use React Redux are:
+
+1. React Redux is the official UI bindings for react Application. It is kept up-to-date with any API changes 
+
+to ensure that your React components behave as expected.
+
+2. It encourages good 'React' architecture.
+
+3. It implements many performance optimizations internally, which allows to components re-render only when it 
+
+actually needs.
+
+<!--style="font-size:30px"-->
+Redux Architecture
+
+![image](images/react-redux-architecture.png)
+
+The components of Redux architecture are explained below.
+
+STORE: A Store is a place where the entire state of your application lists. It manages the status of the 
+
+application and has a dispatch(action) function. It is like a brain responsible for all moving parts in Redux.
+
+ACTION: Action is sent or dispatched from the view which are payloads that can be read by Reducers. It is a 
+
+pure object created to store the information of the user's event. It includes information such as type of 
+
+action, time of occurrence, location of occurrence, its coordinates, and which state it aims to change.
+
+REDUCER: Reducer read the payloads from the actions and then updates the store via the state accordingly. It 
+
+is a pure function to return a new state from the initial state.
+
+<!--style="font-size:30px"-->
+Redux Installation
+
+Requirements: React Redux requires React 16.8.3 or later version.
+
+To use React Redux with React application, you need to install the below command.
+
+---> $ npm install redux react-redux --save  
+
 # React Error Boundaries
 
 A JavaScript error in a part of the UI shouldn’t break the whole app. To solve this problem for React users, 
@@ -5905,7 +6486,7 @@ part of workflow to write the unit test cases.
 <!--style="font-size:30px"-->
 Video Reference
 
-* https://www.youtube.com/watch?v=tiLWCNFzThE&list=PLwGdqUZWnOp3aROg4wypcRhZqJG3ajZWJ
+* https://www.youtube.com/watch?v=QFaFIcGhPoM&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3
 
 
 
